@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 class AppTheme {
@@ -6,12 +7,22 @@ class AppTheme {
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.lightBackground,
     brightness: Brightness.light,
-    fontFamily: 'Satoshi',
-    textTheme: const TextTheme(bodyMedium: TextStyle(color: Color(0xff0D0C0C))),
+    fontFamily: 'sans-serif', // Explicitly set to sans-serif
+    textTheme: TextTheme(
+      bodyMedium: const TextStyle(color: Color(0xff0D0C0C)), // Uses sans-serif
+      displayLarge: GoogleFonts.fredoka(
+        fontSize: 32,
+        color: Color(0xff0D0C0C),
+      ), // Fredoka for large displays
+      labelLarge: GoogleFonts.fredoka(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+      ), // Fredoka for button text
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
-        textStyle: const TextStyle(
+        textStyle: GoogleFonts.fredoka(
           fontSize: 22,
           fontWeight: FontWeight.bold,
         ),
@@ -26,12 +37,22 @@ class AppTheme {
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.darkBackground,
     brightness: Brightness.dark,
-    fontFamily: 'Satoshi',
-    textTheme: const TextTheme(bodyMedium: TextStyle(color: Color(0xffffffff))),
+    fontFamily: 'sans-serif', // Explicitly set to sans-serif
+    textTheme: TextTheme(
+      bodyMedium: const TextStyle(color: Color(0xffffffff)), // Uses sans-serif
+      displayLarge: GoogleFonts.fredoka(
+        fontSize: 32,
+        color: Color(0xffffffff),
+      ), // Fredoka for large displays
+      labelLarge: GoogleFonts.fredoka(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+      ), // Fredoka for button text
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
-        textStyle: const TextStyle(
+        textStyle: GoogleFonts.fredoka(
           fontSize: 22,
           fontWeight: FontWeight.bold,
         ),
