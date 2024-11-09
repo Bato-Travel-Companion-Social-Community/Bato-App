@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
+/// A class that holds the theme data for the application.
 class AppTheme {
+  /// The light theme for the application.
   static final ThemeData lightTheme = ThemeData(
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.lightBackground,
