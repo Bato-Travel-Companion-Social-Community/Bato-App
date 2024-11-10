@@ -17,6 +17,9 @@ class AppTheme {
     // The primary color used in the application.
     primaryColor: AppColors.primary,
 
+    primaryColorLight: AppColors.lightBackground,
+    primaryColorDark: AppColors.darkBackground,
+
     // The background color for scaffold widgets.
     scaffoldBackgroundColor: AppColors.lightBackground,
 
