@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'views/main.dart' show AppTheme, AppColors;
+import 'views/main.dart' show AppTheme, AppColors, SplashPage;
 
 void main() {
   runApp(const MyApp());
@@ -29,9 +29,7 @@ class _MyAppState extends State<MyApp> {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: _themeMode,
-      home: Container(
-        color: AppColors.lightBackground,
-      ),
+      home: SplashPage(),
     );
   }
 }
