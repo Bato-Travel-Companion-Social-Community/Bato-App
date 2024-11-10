@@ -24,7 +24,8 @@ class Logo extends StatelessWidget {
     return Text(
       'Bato',
       style: TextStyle(
-        fontFamily: AppTextStyles.fontFamily,
+        fontFamily:
+            AppTextStyles.fontFamilyPrimary, // Use the primary font family
         fontSize: size, // Use size to set the font size
         fontWeight: FontWeight.bold,
         color: AppColors.primary, // You can customize the color as needed

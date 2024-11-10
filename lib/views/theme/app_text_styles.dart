@@ -10,5 +10,5 @@ class AppTextStyles {
   ///
   /// This font family is set using the Google Fonts package and is currently
   /// set to 'Fredoka'.
-  static final String fontFamily = GoogleFonts.fredoka().fontFamily!;
+  static final String fontFamilyPrimary = GoogleFonts.fredoka().fontFamily!;
 }
