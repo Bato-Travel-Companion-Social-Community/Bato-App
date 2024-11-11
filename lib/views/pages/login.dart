@@ -22,12 +22,12 @@ class _LoginPageState extends State<LoginPage> {
                   key: _formKey,
                   child: Column(
                     children: <Widget>[
-                      TextInputField(
+                      const TextInputField(
                         hintText: 'Email',
                         errorText: 'Please enter your email',
                       ),
-                      const SizedBox(height: 5),
-                      TextInputField(
+                      const SizedBox(height: 10),
+                      const TextInputField(
                         hintText: 'Password',
                         errorText: 'Please enter your password',
                         isPassword: true,
