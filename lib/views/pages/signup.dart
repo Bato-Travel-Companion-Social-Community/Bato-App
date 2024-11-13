@@ -24,8 +24,12 @@ class _SignupPageState extends State<SignupPage> {
                     children: <Widget>[
                       const SizedBox(height: 20),
                       const TextInputField(
+                        hintText: 'Display Name',
+                        errorText: 'What should we call you?',
+                      ),
+                      const TextInputField(
                         hintText: 'Username',
-                        errorText: 'Please enter your Username',
+                        errorText: 'Please enter your username',
                       ),
                       const SizedBox(height: 15),
                       const TextInputField(

@@ -7,11 +7,11 @@ class TextInputField extends StatefulWidget {
   final bool isPassword;
 
   const TextInputField({
-    Key? key,
+    super.key,
     required this.errorText,
     required this.hintText,
     this.isPassword = false,
-  }) : super(key: key);
+  });
 
   @override
   TextInputFieldState createState() => TextInputFieldState();
