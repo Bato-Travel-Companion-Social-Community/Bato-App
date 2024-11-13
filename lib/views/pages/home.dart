@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show AppTheme, CustomAppBar;
+import '../../views/main.dart' show CustomAppBar;
 
 class HomePage extends StatelessWidget {
   @override

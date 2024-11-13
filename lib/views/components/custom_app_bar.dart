@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show AppTheme, Logo;
+import '../../views/main.dart' show Logo;
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
