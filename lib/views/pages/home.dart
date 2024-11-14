@@ -33,8 +33,25 @@ class HomePage extends StatelessWidget {
           // Add more IconButton actions as needed
         ],
       ),
-      body: Center(
-        child: Text('Home Page'),
+      body: ListView(
+        children: [
+          Container(
+            height: 200, // Add a height to the container
+            color: Colors.red,
+          ),
+          Container(
+            height: 200, // Add a height to the container
+            color: Colors.blue,
+          ),
+          Container(
+            height: 200, // Add a height to the container
+            color: Colors.green,
+          ),
+          Container(
+            height: 200, // Add a height to the container
+            color: Colors.yellow,
+          ),
+        ],
       ),
       bottomNavigationBar: CustomBottomBar(),
     );
