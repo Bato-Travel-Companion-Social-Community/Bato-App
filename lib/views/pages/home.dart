@@ -6,9 +6,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: Container(
-        child: Center(
-          child: Text('Home Page'),
+      body: SafeArea(
+        // Wrap the body with SafeArea
+        child: Container(
+          child: Center(
+            child: Text('Home Page'),
+          ),
         ),
       ),
     );
