@@ -1,3 +1,5 @@
+// lib/views/pages/signup_page.dart
+
 import 'package:flutter/material.dart';
 import '../../views/main.dart' show Logo, TextInputField, CustomButton;
 import '../../controllers/main.dart' show AuthService;
@@ -8,35 +10,43 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
+  // GlobalKey<FormState> is used for form validation
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  // Instance of AuthService to handle signup logic
   final AuthService _authService = AuthService();
 
-  // TextEditingControllers to retrieve text from TextInputFields
+  // Controllers to manage the input text for each TextInputField
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  String? _errorMessage; // For displaying error messages
+  // String variable to store error message (if any) during signup
+  String? _errorMessage;
 
-  // Handle signup action
+  /// Handles the signup process. It checks if the form is valid, and then
+  /// calls the AuthService to perform the signup action.
   Future<void> _handleSignup() async {
+    // Validate the form
     if (_formKey.currentState!.validate()) {
+      // Retrieve the values from controllers
       final displayName = _nameController.text;
       final username = _usernameController.text;
       final email = _emailController.text;
       final password = _passwordController.text;
 
-      // Call signup from AuthService
+      // Call the signup method from AuthService
       String? errorMessage =
           await _authService.signup(displayName, username, email, password);
 
+      // If an error message is returned from the signup process, display it
       if (errorMessage != null) {
         setState(() {
           _errorMessage = errorMessage;
         });
       } else {
-        // Navigate to another screen or show success message if signup is successful
+        // Navigate to another screen or show a success message if signup is successful
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -51,7 +61,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
           ),
         );
-// Or another route as per your app's flow
+        // You could redirect to another route instead, based on your app's flow
       }
     }
   }
@@ -65,42 +75,49 @@ class _SignupPageState extends State<SignupPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Logo(size: 100),
+              const Logo(size: 100), // Display logo at the top
               Form(
-                key: _formKey,
+                key: _formKey, // Reference the form to validate it
                 child: Column(
                   children: <Widget>[
                     const SizedBox(height: 20),
+                    // Name input field
                     TextInputField(
                       controller: _nameController,
                       hintText: 'What should we call you?',
                       errorText: 'Please enter your name',
                     ),
                     const SizedBox(height: 15),
+                    // Username input field
                     TextInputField(
                       controller: _usernameController,
                       hintText: 'Username',
                       errorText: 'Please enter your username',
                     ),
                     const SizedBox(height: 15),
+                    // Email input field
                     TextInputField(
                       controller: _emailController,
                       hintText: 'Email',
                       errorText: 'Please enter a valid email',
                     ),
                     const SizedBox(height: 15),
+                    // Password input field
                     TextInputField(
                       controller: _passwordController,
                       hintText: 'Password',
                       errorText: 'Please enter your password',
-                      isPassword: true,
+                      isPassword: true, // Make this a password field
                     ),
                     const SizedBox(height: 30),
+                    // Custom button to trigger signup
                     CustomButton(
-                      text: 'Signup',
-                      onPressed: _handleSignup,
-                      formKey: _formKey,
+                      text: 'Signup', // Text on the button
+                      onPressed:
+                          _handleSignup, // Action to perform when button is pressed
+                      formKey: _formKey, // Pass form key for validation
                     ),
+                    // Display the error message if there is one
                     if (_errorMessage != null)
                       Padding(
                         padding: const EdgeInsets.only(top: 15),
