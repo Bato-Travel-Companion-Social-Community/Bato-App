@@ -15,10 +15,10 @@ class AppTheme {
   /// and button styles.
   static final ThemeData lightTheme = ThemeData(
     // The primary color used in the application.
-    primaryColor: AppColors.primary,
+    primaryColor: AppColors.darkBackground,
 
-    primaryColorLight: AppColors.lightBackground,
-    primaryColorDark: AppColors.darkBackground,
+    primaryColorLight: AppColors.darkBackground,
+    primaryColorDark: AppColors.lightBackground,
 
     // The background color for scaffold widgets.
     scaffoldBackgroundColor: AppColors.lightBackground,
@@ -68,7 +68,9 @@ class AppTheme {
   );
 
   static final ThemeData darkTheme = ThemeData(
-    primaryColor: AppColors.primary,
+    primaryColor: AppColors.lightBackground,
+    primaryColorLight: AppColors.darkBackground,
+    primaryColorDark: AppColors.lightBackground,
     scaffoldBackgroundColor: AppColors.darkBackground,
     brightness: Brightness.dark,
     fontFamily: 'sans-serif', // Explicitly set to sans-serif

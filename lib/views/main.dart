@@ -8,6 +8,7 @@ export 'components/logo.dart';
 export 'components/text_input_field.dart';
 export 'components/custom_button.dart';
 export 'components/custom_app_bar.dart';
+export 'components/custom_bottom_bar.dart';
 
 // pages
 export 'pages/splash.dart';

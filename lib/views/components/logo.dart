@@ -27,7 +27,7 @@ class Logo extends StatelessWidget {
         fontFamily:
             AppTextStyles.fontFamilyPrimary, // Use the primary font family
         fontSize: size, // Use size to set the font size
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w900,
         color: AppColors.primary, // You can customize the color as needed
       ),
     );
