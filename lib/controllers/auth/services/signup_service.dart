@@ -3,8 +3,7 @@ import 'package:http/http.dart' as http;
 import 'token_service.dart';
 
 class SignupService {
-  final String baseUrl =
-      'http://localhost:5000/api/auth'; // Replace with your backend URL
+  final String baseUrl = 'http://192.168.1.132:5000/api/auth';
   final TokenService _tokenService = TokenService();
 
   Future<String?> signup(String displayName, String username, String email,

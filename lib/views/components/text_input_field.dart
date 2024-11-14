@@ -5,12 +5,14 @@ class TextInputField extends StatefulWidget {
   final String errorText;
   final String hintText;
   final bool isPassword;
+  final TextEditingController? controller; // Optional controller
 
   const TextInputField({
     super.key,
     required this.errorText,
     required this.hintText,
     this.isPassword = false,
+    this.controller, // Add controller parameter
   });
 
   @override
@@ -29,6 +31,7 @@ class TextInputFieldState extends State<TextInputField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: widget.controller, // Use the controller here
       decoration: InputDecoration(
         hintText: widget.hintText,
         hintStyle: const TextStyle(color: AppColors.grey),
