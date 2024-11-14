@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       backgroundColor: Theme.of(context)
           .scaffoldBackgroundColor, // Use the scaffold background color from the current theme
-
+      elevation: 4.0,
       // Conditionally add actions to the AppBar if any are passed
       actions: appBarActions,
     );
@@ -30,5 +30,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   // Implement the preferredSize property (this defines the height of the AppBar)
   @override
   Size get preferredSize =>
-      const Size.fromHeight(56.0); // You can adjust the height here as needed
+      const Size.fromHeight(65.0); // You can adjust the height here as needed
 }

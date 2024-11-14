@@ -18,22 +18,26 @@ class CustomBottomBar extends StatelessWidget {
         children: [
           IconButton(
             icon: const Icon(Icons.home_outlined),
-            iconSize: 32,
+            color: Theme.of(context).primaryColor,
+            iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.explore_outlined),
-            iconSize: 32,
+            color: Theme.of(context).primaryColor,
+            iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.airplane_ticket_outlined),
-            iconSize: 32,
+            color: Theme.of(context).primaryColor,
+            iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.account_box_outlined),
-            iconSize: 32,
+            color: Theme.of(context).primaryColor,
+            iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
         ],
