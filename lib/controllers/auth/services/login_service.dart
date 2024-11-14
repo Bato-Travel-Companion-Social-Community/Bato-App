@@ -5,12 +5,12 @@ import 'token_service.dart';
 
 class LoginService {
   final String baseUrl =
-      'http://your-backend-url/api'; // Replace with your backend URL
+      'http://192.168.1.132:5000/api/auth'; // Replace with your backend URL
   final TokenService _tokenService = TokenService();
 
   Future<String?> login(String email, String password) async {
     final response = await http.post(
-      Uri.parse('$baseUrl/login'),
+      Uri.parse('$baseUrl/signin'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode({
         'email': email,
