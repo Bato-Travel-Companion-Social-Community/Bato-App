@@ -8,7 +8,7 @@ import 'token_service.dart'; // Importing TokenService to save the JWT token
 class SignupService {
   // Base URL of the backend API
   final String baseUrl =
-      'http://192.168.1.132:5000/api/auth'; // Replace with your backend URL
+      'http://10.22.8.69:5000/api/auth'; // Replace with your backend URL
 
   // Instance of TokenService to securely store the authentication token
   final TokenService _tokenService = TokenService();
