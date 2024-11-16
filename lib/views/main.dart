@@ -15,3 +15,7 @@ export 'pages/splash.dart';
 export 'pages/login.dart';
 export 'pages/signup.dart';
 export 'pages/home.dart';
+export 'pages/explore.dart';
+export 'pages/plan_trip.dart';
+export 'pages/account.dart';
+export 'pages/my_community.dart';

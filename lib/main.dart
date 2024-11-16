@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'views/main.dart'
-    show AppTheme, HomePage; // Adjust imports as necessary for your project
+    show
+        AppTheme,
+        HomePage,
+        LoginPage,
+        SignupPage,
+        MyCommunity,
+        Explore,
+        PlanTrip,
+        Account;
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +37,31 @@ class _MyAppState extends State<MyApp> {
       GoRoute(
         path: '/',
         builder: (context, state) => HomePage(),
-      )
+      ),
+      GoRoute(
+        path: '/login',
+        builder: (context, state) => LoginPage(),
+      ),
+      GoRoute(
+        path: '/signup',
+        builder: (context, state) => SignupPage(),
+      ),
+      GoRoute(
+        path: '/my_community',
+        builder: (context, state) => MyCommunity(),
+      ),
+      GoRoute(
+        path: '/explore',
+        builder: (context, state) => Explore(),
+      ),
+      GoRoute(
+        path: '/plan_trip',
+        builder: (context, state) => PlanTrip(),
+      ),
+      GoRoute(
+        path: '/account',
+        builder: (context, state) => Account(),
+      ),
     ],
   );
 
