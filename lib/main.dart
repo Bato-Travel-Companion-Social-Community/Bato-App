@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'views/main.dart' show AppTheme, SignupPage;
+import 'views/main.dart' show AppTheme, SignupPage, LoginPage;
 
 void main() {
   runApp(const MyApp());
