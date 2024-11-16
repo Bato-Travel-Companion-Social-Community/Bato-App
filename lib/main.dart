@@ -29,7 +29,11 @@ class _MyAppState extends State<MyApp> {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: _themeMode,
+<<<<<<< HEAD
       home: HomePage(),
+=======
+      home: SignupPage(),
+>>>>>>> auth_controllers_functionalities
     );
   }
 }
