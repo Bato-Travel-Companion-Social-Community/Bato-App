@@ -8,15 +8,15 @@ class TokenService {
 
   /// Saves the provided JWT token securely in storage.
   ///
-  /// This method stores the token using the key 'jwt_token'.
+  /// This method stores the token using the key 'auth_token'.
   ///
   /// [token]: The JWT token to be saved.
   ///
   /// Throws an error if saving the token fails.
   Future<void> saveToken(String token) async {
     try {
-      // Writing the token into secure storage with the key 'jwt_token'
-      await _secureStorage.write(key: 'jwt_token', value: token);
+      // Writing the token into secure storage with the key 'auth_token'
+      await _secureStorage.write(key: 'auth_token', value: token);
     } catch (e) {
       // If an error occurs while saving the token, print the error
       print('Error saving token: $e');
@@ -25,7 +25,7 @@ class TokenService {
 
   /// Retrieves the JWT token from secure storage.
   ///
-  /// This method reads the token stored with the key 'jwt_token'.
+  /// This method reads the token stored with the key 'auth_token'.
   /// If the token is found, it returns the token, otherwise it returns null.
   ///
   /// Returns a [String?] representing the token if it exists, or null if not.
@@ -33,8 +33,8 @@ class TokenService {
   /// Throws an error if reading the token fails.
   Future<String?> getToken() async {
     try {
-      // Reading the token from secure storage using the key 'jwt_token'
-      return await _secureStorage.read(key: 'jwt_token');
+      // Reading the token from secure storage using the key 'auth_token'
+      return await _secureStorage.read(key: 'auth_token');
     } catch (e) {
       // If an error occurs while reading the token, print the error
       print('Error reading token: $e');
@@ -44,13 +44,13 @@ class TokenService {
 
   /// Deletes the JWT token from secure storage.
   ///
-  /// This method is called when the user logs out. It removes the token stored under the key 'jwt_token'.
+  /// This method is called when the user logs out. It removes the token stored under the key 'auth_token'.
   ///
   /// Throws an error if deleting the token fails.
   Future<void> deleteToken() async {
     try {
       // Deleting the token from secure storage
-      await _secureStorage.delete(key: 'jwt_token');
+      await _secureStorage.delete(key: 'auth_token');
     } catch (e) {
       // If an error occurs while deleting the token, print the error
       print('Error deleting token: $e');
