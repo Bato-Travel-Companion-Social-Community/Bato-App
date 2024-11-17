@@ -17,6 +17,9 @@ export 'pages/signup.dart';
 export 'pages/home.dart';
 export 'pages/explore.dart';
 export 'pages/plan_trip.dart';
-export 'pages/account.dart';
+export 'pages/my_profile.dart';
 export 'pages/my_community.dart';
 export 'pages/messenger.dart';
+
+// router
+export 'router/main_go_router.dart';

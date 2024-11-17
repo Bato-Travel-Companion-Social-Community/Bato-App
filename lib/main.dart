@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'views/main.dart' show AppTheme, SplashPage, LoginPage, MyCommunityPage;
+import 'views/main.dart' show AppTheme, MainGoRouter;
 
 void main() {
   runApp(const MyApp());
@@ -22,25 +22,7 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  late final GoRouter _router = GoRouter(
-    initialLocation: '/', // Start at splash page
-    routes: [
-      GoRoute(
-        path: '/',
-        builder: (context, state) =>
-            const SplashPage(), // Show splash page first
-      ),
-      GoRoute(
-        path: '/login',
-        builder: (context, state) => LoginPage(), // Show login page
-      ),
-      GoRoute(
-        path: '/my_community',
-        builder: (context, state) =>
-            const MyCommunityPage(), // Show MyCommunityPage
-      ),
-    ],
-  );
+  late final GoRouter _router = MainGoRouter();
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +32,7 @@ class _MyAppState extends State<MyApp> {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: _themeMode,
-      routerConfig: _router, // Use routerConfig here
+      routerConfig: _router,
     );
   }
 }
