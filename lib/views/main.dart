@@ -19,3 +19,4 @@ export 'pages/explore.dart';
 export 'pages/plan_trip.dart';
 export 'pages/account.dart';
 export 'pages/my_community.dart';
+export 'pages/messenger.dart';

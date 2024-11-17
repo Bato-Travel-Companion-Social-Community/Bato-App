@@ -1,61 +1,41 @@
+import 'dart:async'; // For Timer
 import 'package:flutter/material.dart';
-import '../../views/main.dart'
-    show CustomAppBar, CustomBottomBar; // Import the CustomAppBar widget
+import 'package:go_router/go_router.dart';
+import '../../controllers/main.dart' show AuthService;
+import '../../views/main.dart' show SplashPage; // Import SplashPage
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final AuthService _authService = AuthService();
+
+  @override
+  void initState() {
+    super.initState();
+    // Start a 5-second timer to determine navigation
+    Timer(const Duration(seconds: 8), _checkUserLoginStatus);
+  }
+
+  /// Checks if the user is logged in and navigates accordingly
+  Future<void> _checkUserLoginStatus() async {
+    bool isLoggedIn = await _authService.isUserLoggedIn();
+    if (mounted) {
+      if (isLoggedIn) {
+        // Navigate to MyCommunityPage if logged in
+        context.go('/my_community');
+      } else {
+        // Navigate to LoginPage if not logged in
+        context.go('/login');
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(
-        appBarActions: [
-          // First IconButton for notifications
-          IconButton(
-            icon: const Icon(Icons.notifications_none_outlined),
-            iconSize: 28,
-            color: Theme.of(context)
-                .primaryColor, // Set the icon color to primaryColor from the theme
-            onPressed: () {
-              // Handle notification icon tap
-              print("Notifications tapped");
-            },
-          ),
-
-          // Second IconButton for settings
-          IconButton(
-            icon: const Icon(Icons.message_outlined),
-            color: Theme.of(context)
-                .primaryColor, // Set the icon color to primaryColor from the theme
-            iconSize: 28,
-            onPressed: () {
-              // Handle settings icon tap
-              print("Settings tapped");
-            },
-          ),
-
-          // Add more IconButton actions as needed
-        ],
-      ),
-      body: ListView(
-        children: [
-          Container(
-            height: 200, // Add a height to the container
-            color: Colors.red,
-          ),
-          Container(
-            height: 200, // Add a height to the container
-            color: Colors.blue,
-          ),
-          Container(
-            height: 200, // Add a height to the container
-            color: Colors.green,
-          ),
-          Container(
-            height: 200, // Add a height to the container
-            color: Colors.yellow,
-          ),
-        ],
-      ),
-      bottomNavigationBar: CustomBottomBar(),
-    );
+    // Use SplashPage as the content during the 5-second timer
+    return const SplashPage();
   }
 }

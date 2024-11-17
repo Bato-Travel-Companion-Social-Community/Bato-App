@@ -1,6 +1,6 @@
 // lib/views/pages/login_page.dart
-
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../views/main.dart' show Logo, TextInputField, CustomButton;
 import '../../controllers/main.dart' show AuthService;
 
@@ -42,20 +42,7 @@ class _LoginPageState extends State<LoginPage> {
         });
       } else {
         // Navigate to another screen after a successful login
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Scaffold(
-              backgroundColor: Colors.red,
-              body: Center(
-                child: Text(
-                  'Welcome!',
-                  style: TextStyle(color: Colors.white, fontSize: 24),
-                ),
-              ),
-            ),
-          ),
-        );
+        context.go('/my_community');
         // You can replace this with navigation to a home or dashboard screen
       }
     }

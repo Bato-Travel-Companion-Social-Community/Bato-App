@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'views/main.dart'
-    show
-        AppTheme,
-        HomePage,
-        LoginPage,
-        SignupPage,
-        MyCommunity,
-        Explore,
-        PlanTrip,
-        Account;
+import 'views/main.dart' show AppTheme, SplashPage, LoginPage, MyCommunityPage;
 
 void main() {
   runApp(const MyApp());
@@ -32,35 +23,21 @@ class _MyAppState extends State<MyApp> {
   }
 
   late final GoRouter _router = GoRouter(
+    initialLocation: '/', // Start at splash page
     routes: [
-      // Define your routes here
       GoRoute(
         path: '/',
-        builder: (context, state) => HomePage(),
+        builder: (context, state) =>
+            const SplashPage(), // Show splash page first
       ),
       GoRoute(
         path: '/login',
-        builder: (context, state) => LoginPage(),
-      ),
-      GoRoute(
-        path: '/signup',
-        builder: (context, state) => SignupPage(),
+        builder: (context, state) => LoginPage(), // Show login page
       ),
       GoRoute(
         path: '/my_community',
-        builder: (context, state) => MyCommunity(),
-      ),
-      GoRoute(
-        path: '/explore',
-        builder: (context, state) => Explore(),
-      ),
-      GoRoute(
-        path: '/plan_trip',
-        builder: (context, state) => PlanTrip(),
-      ),
-      GoRoute(
-        path: '/account',
-        builder: (context, state) => Account(),
+        builder: (context, state) =>
+            const MyCommunityPage(), // Show MyCommunityPage
       ),
     ],
   );
@@ -73,8 +50,7 @@ class _MyAppState extends State<MyApp> {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: _themeMode,
-      routerDelegate: _router.routerDelegate,
-      routeInformationParser: _router.routeInformationParser,
+      routerConfig: _router, // Use routerConfig here
     );
   }
 }
