@@ -50,6 +50,7 @@ class AuthService {
 
   /// Checks if the user is logged in by validating if a token exists.
   Future<bool> isUserLoggedIn() async {
+    await _tokenService.deleteToken(); // Remove token for testing
     await _tokenService.printAllStoredData();
     String? token = await _tokenService.getToken(); // Retrieve token
     return token != null && token.isNotEmpty; // Return true if token exists

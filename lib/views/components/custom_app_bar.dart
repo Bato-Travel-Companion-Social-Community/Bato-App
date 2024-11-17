@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       backgroundColor: Theme.of(context)
           .scaffoldBackgroundColor, // Use the scaffold background color from the current theme
-      elevation: 4.0,
+      elevation: 0,
       // Conditionally add actions to the AppBar if any are passed
       actions: appBarActions,
     );
