@@ -9,7 +9,10 @@ import 'token_service.dart'; // Importing TokenService to handle token storage
 class LoginService {
   // The base URL of the backend authentication API
   // Replace with your actual backend URL when deploying to production
-  final String baseUrl = 'http://192.168.1.132:5000/api/auth';
+  final String baseUrl;
+
+  // Constructor to initialize the base URL
+  LoginService({required this.baseUrl});
 
   // Instance of TokenService to securely save and manage the JWT token
   final TokenService _tokenService = TokenService();
