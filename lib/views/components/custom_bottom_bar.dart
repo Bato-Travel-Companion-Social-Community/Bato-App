@@ -25,7 +25,7 @@ class CustomBottomBar extends StatelessWidget {
             color: pageIndex == 0
                 ? AppColors.primary
                 : Theme.of(context).primaryColor,
-            iconSize: 35,
+            iconSize: 41,
             onPressed: () {
               if (pageIndex != 0) {
                 GoRouter.of(context).go('/my_community');
@@ -37,9 +37,9 @@ class CustomBottomBar extends StatelessWidget {
             color: pageIndex == 1
                 ? AppColors.primary
                 : Theme.of(context).primaryColor,
-            iconSize: 35,
+            iconSize: 41,
             onPressed: () {
-              if (pageIndex != 0) {
+              if (pageIndex != 1) {
                 GoRouter.of(context).go('/explore');
               }
             }, // Empty onPressed
@@ -49,9 +49,9 @@ class CustomBottomBar extends StatelessWidget {
             color: pageIndex == 2
                 ? AppColors.primary
                 : Theme.of(context).primaryColor,
-            iconSize: 35,
+            iconSize: 41,
             onPressed: () {
-              if (pageIndex != 0) {
+              if (pageIndex != 2) {
                 GoRouter.of(context).go('/plan_trip');
               }
             }, // Empty onPressed
@@ -61,10 +61,10 @@ class CustomBottomBar extends StatelessWidget {
             color: pageIndex == 3
                 ? AppColors.primary
                 : Theme.of(context).primaryColor,
-            iconSize: 35,
+            iconSize: 41,
             onPressed: () {
-              if (pageIndex != 0) {
-                GoRouter.of(context).go('/profile');
+              if (pageIndex != 3) {
+                GoRouter.of(context).go('/my_profile');
               }
             }, // Empty onPressed
           ),
