@@ -44,7 +44,7 @@ class CustomButton extends StatelessWidget {
       height: height, // Sets the height of the button
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(
+          backgroundColor: WidgetStateProperty.all(
               AppColors.primary), // Background color of the button
         ),
         onPressed: () {
@@ -66,7 +66,7 @@ class CustomButton extends StatelessWidget {
         child: Text(
           text, // Display the button text
           style: TextStyle(
-            color: AppColors.lightBackground, // Text color
+            color: Theme.of(context).scaffoldBackgroundColor, // Text color
             fontFamily:
                 AppTextStyles.fontFamilyPrimary, // Font family for the text
             fontWeight: FontWeight.bold, // Font weight for the text

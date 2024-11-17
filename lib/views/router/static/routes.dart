@@ -9,20 +9,32 @@ import '../../../views/main.dart'
         PlanTripPage,
         MyProfilePage,
         SplashPage,
-        LoginPage;
+        LoginPage,
+        SignupPage;
 import '../helpers/main.dart' show getPageIndexOfBottomBar, getAppBar;
 
 final List<RouteBase> routes = [
   // ShellRoute for pages with bottom navigation bar
   ShellRoute(
     builder: (context, state, child) {
-      // Use fullPath to determine the active page index
       final int pageIndex = getPageIndexOfBottomBar(state.fullPath);
 
-      // Conditionally change the AppBar actions
+      // This list will hold the content of each page
+      final List<Widget> pages = [
+        MyCommunityPage(),
+        ExplorePage(),
+        PlanTripPage(),
+        MyProfilePage(),
+      ];
+
       return Scaffold(
         appBar: getAppBar(context, state.fullPath),
-        body: child,
+        body: SafeArea(
+          child: IndexedStack(
+            index: pageIndex, // Use the index to display the active page
+            children: pages, // The pages will be preserved in memory
+          ),
+        ),
         bottomNavigationBar:
             pageIndex != -1 ? CustomBottomBar(pageIndex: pageIndex) : null,
       );
@@ -54,5 +66,9 @@ final List<RouteBase> routes = [
   GoRoute(
     path: '/login',
     builder: (context, state) => LoginPage(),
+  ),
+  GoRoute(
+    path: '/signup',
+    builder: (context, state) => SignupPage(),
   ),
 ];
