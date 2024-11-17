@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../views/main.dart' show AppColors;
 
 class CustomBottomBar extends StatelessWidget {
   final int pageIndex;
@@ -21,32 +22,32 @@ class CustomBottomBar extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.home_outlined),
             color: pageIndex == 0
-                ? Theme.of(context).primaryColor
-                : Theme.of(context).scaffoldBackgroundColor,
+                ? AppColors.primary
+                : Theme.of(context).primaryColor,
             iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.explore_outlined),
             color: pageIndex == 1
-                ? Theme.of(context).primaryColor
-                : Theme.of(context).scaffoldBackgroundColor,
+                ? AppColors.primary
+                : Theme.of(context).primaryColor,
             iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.airplane_ticket_outlined),
             color: pageIndex == 2
-                ? Theme.of(context).primaryColor
-                : Theme.of(context).scaffoldBackgroundColor,
+                ? AppColors.primary
+                : Theme.of(context).primaryColor,
             iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.account_box_outlined),
             color: pageIndex == 3
-                ? Theme.of(context).primaryColor
-                : Theme.of(context).scaffoldBackgroundColor,
+                ? AppColors.primary
+                : Theme.of(context).primaryColor,
             iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),

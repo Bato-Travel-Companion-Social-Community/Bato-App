@@ -55,7 +55,9 @@ class MyCommunityPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: CustomBottomBar(),
+      bottomNavigationBar: CustomBottomBar(
+        pageIndex: 0,
+      ),
     );
   }
 }
