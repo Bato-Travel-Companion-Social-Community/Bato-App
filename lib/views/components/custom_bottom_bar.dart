@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../views/main.dart' show AppColors;
 
 class CustomBottomBar extends StatelessWidget {
@@ -25,7 +26,11 @@ class CustomBottomBar extends StatelessWidget {
                 ? AppColors.primary
                 : Theme.of(context).primaryColor,
             iconSize: 35,
-            onPressed: () {}, // Empty onPressed
+            onPressed: () {
+              if (pageIndex != 0) {
+                GoRouter.of(context).go('/my_community');
+              }
+            }, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.explore_outlined),
@@ -33,7 +38,11 @@ class CustomBottomBar extends StatelessWidget {
                 ? AppColors.primary
                 : Theme.of(context).primaryColor,
             iconSize: 35,
-            onPressed: () {}, // Empty onPressed
+            onPressed: () {
+              if (pageIndex != 0) {
+                GoRouter.of(context).go('/explore');
+              }
+            }, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.airplane_ticket_outlined),
@@ -41,7 +50,11 @@ class CustomBottomBar extends StatelessWidget {
                 ? AppColors.primary
                 : Theme.of(context).primaryColor,
             iconSize: 35,
-            onPressed: () {}, // Empty onPressed
+            onPressed: () {
+              if (pageIndex != 0) {
+                GoRouter.of(context).go('/plan_trip');
+              }
+            }, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.account_box_outlined),
@@ -49,7 +62,11 @@ class CustomBottomBar extends StatelessWidget {
                 ? AppColors.primary
                 : Theme.of(context).primaryColor,
             iconSize: 35,
-            onPressed: () {}, // Empty onPressed
+            onPressed: () {
+              if (pageIndex != 0) {
+                GoRouter.of(context).go('/profile');
+              }
+            }, // Empty onPressed
           ),
         ],
       ),
