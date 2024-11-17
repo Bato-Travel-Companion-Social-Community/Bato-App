@@ -1,6 +1,7 @@
 // lib/views/pages/signup_page.dart
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../views/main.dart' show Logo, TextInputField, CustomButton;
 import '../../controllers/main.dart' show AuthService;
 
@@ -71,7 +72,8 @@ class _SignupPageState extends State<SignupPage> {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(60.0),
+          padding:
+              const EdgeInsets.only(left: 60, right: 60, top: 30, bottom: 5),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -116,6 +118,24 @@ class _SignupPageState extends State<SignupPage> {
                       onPressed:
                           _handleSignup, // Action to perform when button is pressed
                       formKey: _formKey, // Pass form key for validation
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text('Already have an account?'),
+                        TextButton(
+                          onPressed: () {
+                            context.go('/login');
+                          },
+                          child: const Text('login',
+                              style: TextStyle(
+                                  fontFamily: 'sans-serif',
+                                  fontSize: 15,
+                                  color: Colors
+                                      .blue) // Add a text button to navigate to the signup page
+                              ),
+                        ),
+                      ],
                     ),
                     // Display the error message if there is one
                     if (_errorMessage != null)
