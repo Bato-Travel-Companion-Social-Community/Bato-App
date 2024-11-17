@@ -56,4 +56,16 @@ class TokenService {
       print('Error deleting token: $e');
     }
   }
+
+  Future<void> printAllStoredData() async {
+    final FlutterSecureStorage _secureStorage = FlutterSecureStorage();
+
+    // Retrieve all key-value pairs stored in Secure Storage
+    Map<String, String> allData = await _secureStorage.readAll();
+
+    // Print the data to the console
+    allData.forEach((key, value) {
+      print('Key: $key, Value: $value');
+    });
+  }
 }
