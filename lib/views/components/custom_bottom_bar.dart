@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomBottomBar extends StatelessWidget {
+  final int pageIndex;
   const CustomBottomBar({
     super.key,
+    required this.pageIndex,
   });
 
   @override
@@ -18,25 +20,33 @@ class CustomBottomBar extends StatelessWidget {
         children: [
           IconButton(
             icon: const Icon(Icons.home_outlined),
-            color: Theme.of(context).primaryColor,
+            color: pageIndex == 0
+                ? Theme.of(context).primaryColor
+                : Theme.of(context).scaffoldBackgroundColor,
             iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.explore_outlined),
-            color: Theme.of(context).primaryColor,
+            color: pageIndex == 1
+                ? Theme.of(context).primaryColor
+                : Theme.of(context).scaffoldBackgroundColor,
             iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.airplane_ticket_outlined),
-            color: Theme.of(context).primaryColor,
+            color: pageIndex == 2
+                ? Theme.of(context).primaryColor
+                : Theme.of(context).scaffoldBackgroundColor,
             iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),
           IconButton(
             icon: const Icon(Icons.account_box_outlined),
-            color: Theme.of(context).primaryColor,
+            color: pageIndex == 3
+                ? Theme.of(context).primaryColor
+                : Theme.of(context).scaffoldBackgroundColor,
             iconSize: 35,
             onPressed: () {}, // Empty onPressed
           ),

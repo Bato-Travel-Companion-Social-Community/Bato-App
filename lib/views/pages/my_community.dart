@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import '../../views/main.dart' show CustomAppBar, CustomBottomBar;
 
 class MyCommunityPage extends StatelessWidget {
