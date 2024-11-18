@@ -7,7 +7,7 @@ import './services/main.dart'
 class AuthService {
   // Instances of the login, signup, and logout services
   final LoginService _loginService =
-      LoginService(baseUrl: 'http://192.168.1.132:5000/api/auth');
+      LoginService(baseUrl: 'http://10.22.8.69:5000/api/auth');
   final SignupService _signupService =
       SignupService(baseUrl: 'http://192.168.1.132:5000/api/auth');
   final LogoutService _logoutService = LogoutService();
