@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart'
-    show CustomAppBar, CustomBottomBar, PostComponent;
+import '../../views/main.dart' show PostComponent;
 
 class MyCommunityPage extends StatelessWidget {
   const MyCommunityPage({super.key});
