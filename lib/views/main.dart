@@ -9,7 +9,7 @@ export 'components/text_input_field.dart';
 export 'components/custom_button.dart';
 export 'components/custom_app_bar.dart';
 export 'components/custom_bottom_bar.dart';
-export 'components/custom_post.dart';
+export 'components/posts/my_community_image_post.dart';
 
 // pages
 export 'pages/splash.dart';
