@@ -2,11 +2,22 @@ import 'package:flutter/material.dart';
 import '../../views/main.dart'
     show Logo; // Assuming Logo is defined in views/main.dart
 
+/// A custom AppBar widget that includes a logo and optional actions.
+///
+/// This widget extends [StatelessWidget] and implements [PreferredSizeWidget]
+/// to provide a custom AppBar with a logo and a list of actions.
+///
+/// The [CustomAppBar] widget takes an optional list of [appBarActions] which
+/// are displayed as actions in the AppBar. If no actions are provided, an
+/// empty list is used by default.
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  // This property holds the list of actions (like icons) in the AppBar
+  /// A list of widgets to be displayed as actions in the AppBar.
   final List<Widget> appBarActions;
 
-  // Constructor to accept appBarActions as optional parameter
+  /// Creates a [CustomAppBar] widget.
+  ///
+  /// The [appBarActions] parameter is optional and defaults to an empty list
+  /// if not provided.
   const CustomAppBar({
     super.key,
     this.appBarActions =
@@ -21,13 +32,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       backgroundColor: Theme.of(context)
           .scaffoldBackgroundColor, // Use the scaffold background color from the current theme
-      elevation: 0,
-      // Conditionally add actions to the AppBar if any are passed
+      elevation: 0, // Prevent any shadow effects
+      scrolledUnderElevation:
+          0, // Prevent app bar from changing elevation on scroll
       actions: appBarActions,
     );
   }
 
-  // Implement the preferredSize property (this defines the height of the AppBar)
+  /// The preferred size of the AppBar.
+  ///
+  /// This property defines the height of the AppBar. The default height is set
+  /// to 65.0.
   @override
   Size get preferredSize =>
       const Size.fromHeight(65.0); // You can adjust the height here as needed

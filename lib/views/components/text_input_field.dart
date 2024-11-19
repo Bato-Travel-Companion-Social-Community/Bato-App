@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import '../../views/main.dart' show AppColors;
 
+/// A custom text input field widget with optional password visibility toggle.
+///
+/// This widget extends [StatefulWidget] to provide a customizable text input field
+/// with optional password visibility toggle functionality.
+///
+/// The [TextInputField] widget takes a required [controller] and [hintText], and an
+/// optional [isPassword] flag to indicate if the field is for password input.
+///
 class TextInputField extends StatefulWidget {
   final String errorText;
   final String hintText;
