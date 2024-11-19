@@ -14,7 +14,7 @@ class PostLocation extends StatelessWidget {
       location,
       style: const TextStyle(
         color: Colors.grey,
-        fontSize: 14,
+        fontSize: 12,
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'post_top_bar.dart';
 import 'post_image.dart';
 import 'post_bio.dart';
+import 'post_bottom_bar.dart';
 
 class MyCommunityImagePost extends StatelessWidget {
   final String ownerName;
@@ -31,6 +32,7 @@ class MyCommunityImagePost extends StatelessWidget {
               location: location,
               profileImageUrl: profileImageUrl),
           PostImage(imageUrl: imageUrl),
+          const PostBottomBar(),
           PostBio(bio: bio),
         ],
       ),

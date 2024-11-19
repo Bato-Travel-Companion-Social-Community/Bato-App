@@ -7,9 +7,9 @@ import 'static/main.dart' show routes;
 /// initial location and a list of routes.
 ///
 /// The initial location is set to the root path ('/') by default, which typically
-/// corresponds to the splash page or home page of the application.
+/// corresponds to the splash page.
 ///
-/// The [routes] are imported from 'static/main.dart' and define the navigation
+/// The [routes] are imported from 'static/routes.dart' and define the navigation
 /// structure of the application.
 GoRouter MainGoRouter() {
   return GoRouter(

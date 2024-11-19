@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../views/main.dart' show AppTextStyles;
 
 class PostOwnerName extends StatelessWidget {
   final String ownerName;
@@ -12,8 +13,9 @@ class PostOwnerName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       ownerName,
-      style: const TextStyle(
+      style: TextStyle(
         fontWeight: FontWeight.bold,
+        fontFamily: AppTextStyles.fontFamilyPrimary,
         fontSize: 16,
       ),
     );
