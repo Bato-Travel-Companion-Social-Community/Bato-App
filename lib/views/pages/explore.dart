@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show CustomAppBar, CustomBottomBar;
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});

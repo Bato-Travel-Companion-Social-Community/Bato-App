@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../views/main.dart' show CustomBottomBar;
-import '../static/main.dart'
-    show getMyCommunityPageBottomBarActions, getDefaultBottomBarActions;
+import '../static/main.dart' show getDefaultBottomBarActions;
 
 int getPageIndexOfBottomBar(String? fullPath) {
   switch (fullPath) {

@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 
 import '../../../views/main.dart'
     show
-        CustomBottomBar,
         MyCommunityPage,
         ExplorePage,
         PlanTripPage,

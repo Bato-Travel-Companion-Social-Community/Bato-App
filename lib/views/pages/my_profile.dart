@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show CustomAppBar;
 
 class MyProfilePage extends StatelessWidget {
   const MyProfilePage({super.key});

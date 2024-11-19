@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show CustomAppBar, CustomBottomBar;
 
 class MyCommunityPage extends StatelessWidget {
   const MyCommunityPage({super.key});
