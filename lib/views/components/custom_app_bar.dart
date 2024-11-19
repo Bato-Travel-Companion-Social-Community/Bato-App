@@ -6,7 +6,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   // This property holds the list of actions (like icons) in the AppBar
   final List<Widget> appBarActions;
 
-  // Constructor to accept appBarActions as optional parameter
+  // Constructor to accept appBarActions as an optional parameter
   const CustomAppBar({
     super.key,
     this.appBarActions =
@@ -21,8 +21,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       backgroundColor: Theme.of(context)
           .scaffoldBackgroundColor, // Use the scaffold background color from the current theme
-      elevation: 0,
-      // Conditionally add actions to the AppBar if any are passed
+      elevation: 0, // Prevent any shadow effects
+      scrolledUnderElevation:
+          0, // Prevent app bar from changing elevation on scroll
       actions: appBarActions,
     );
   }
