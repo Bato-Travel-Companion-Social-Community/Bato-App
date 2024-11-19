@@ -8,10 +8,12 @@ import '../../../views/main.dart'
         ExplorePage,
         PlanTripPage,
         MyProfilePage,
+        AddPostPage,
         SplashPage,
         LoginPage,
         SignupPage;
-import '../helpers/main.dart' show getPageIndexOfBottomBar, getAppBar;
+import '../helpers/main.dart'
+    show getPageIndexOfBottomBar, getAppBar, getBottomBar;
 
 final List<RouteBase> routes = [
   // ShellRoute for pages with bottom navigation bar
@@ -23,6 +25,7 @@ final List<RouteBase> routes = [
       final List<Widget> pages = [
         MyCommunityPage(),
         ExplorePage(),
+        AddPostPage(),
         PlanTripPage(),
         MyProfilePage(),
       ];
@@ -36,7 +39,7 @@ final List<RouteBase> routes = [
           ),
         ),
         bottomNavigationBar:
-            pageIndex != -1 ? CustomBottomBar(pageIndex: pageIndex) : null,
+            pageIndex != -1 ? getBottomBar(context, state.fullPath) : null,
       );
     },
     routes: [
@@ -47,6 +50,10 @@ final List<RouteBase> routes = [
       GoRoute(
         path: '/explore',
         builder: (context, state) => ExplorePage(),
+      ),
+      GoRoute(
+        path: '/add_post',
+        builder: (context, state) => AddPostPage(),
       ),
       GoRoute(
         path: '/plan_trip',

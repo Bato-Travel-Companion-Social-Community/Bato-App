@@ -20,6 +20,7 @@ export 'pages/plan_trip.dart';
 export 'pages/my_profile.dart';
 export 'pages/my_community.dart';
 export 'pages/messenger.dart';
+export 'pages/add_post.dart';
 
 // router
 export 'router/main_go_router.dart';
