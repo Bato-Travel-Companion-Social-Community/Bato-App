@@ -1,13 +1,17 @@
-import './services/main.dart' show LoginService, SignupService, LogoutService;
+import './services/main.dart'
+    show LoginService, SignupService, LogoutService, TokenService;
 
 /// AuthService is a central service responsible for managing user authentication processes.
 /// It includes methods for logging in, signing up, and logging out by interacting with
 /// the respective services: LoginService, SignupService, and LogoutService.
 class AuthService {
   // Instances of the login, signup, and logout services
-  final LoginService _loginService = LoginService();
-  final SignupService _signupService = SignupService();
+  final LoginService _loginService =
+      LoginService(baseUrl: 'http://192.168.1.132:5000/api/auth');
+  final SignupService _signupService =
+      SignupService(baseUrl: 'http://192.168.1.132:5000/api/auth');
   final LogoutService _logoutService = LogoutService();
+  final TokenService _tokenService = TokenService();
 
   /// Login function to authenticate a user.
   ///
@@ -44,5 +48,13 @@ class AuthService {
   /// the stored token and logs out the user.
   Future<void> logout() async {
     await _logoutService.logout();
+  }
+
+  /// Checks if the user is logged in by validating if a token exists.
+  Future<bool> isUserLoggedIn() async {
+    await _tokenService.deleteToken(); // Remove token for testing
+    await _tokenService.printAllStoredData();
+    String? token = await _tokenService.getToken(); // Retrieve token
+    return token != null && token.isNotEmpty; // Return true if token exists
   }
 }

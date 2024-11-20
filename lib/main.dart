@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'views/main.dart' show AppTheme, LoginPage;
+import 'package:go_router/go_router.dart';
+import 'views/main.dart' show AppTheme, MainGoRouter;
 
 void main() {
   runApp(const MyApp());
@@ -21,15 +22,17 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  late final GoRouter _router = MainGoRouter();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Bato',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: _themeMode,
-      home: LoginPage(),
+      routerConfig: _router,
     );
   }
 }

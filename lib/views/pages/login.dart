@@ -1,6 +1,6 @@
 // lib/views/pages/login_page.dart
-
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../views/main.dart' show Logo, TextInputField, CustomButton;
 import '../../controllers/main.dart' show AuthService;
 
@@ -42,20 +42,7 @@ class _LoginPageState extends State<LoginPage> {
         });
       } else {
         // Navigate to another screen after a successful login
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Scaffold(
-              backgroundColor: Colors.red,
-              body: Center(
-                child: Text(
-                  'Welcome!',
-                  style: TextStyle(color: Colors.white, fontSize: 24),
-                ),
-              ),
-            ),
-          ),
-        );
+        context.go('/my_community');
         // You can replace this with navigation to a home or dashboard screen
       }
     }
@@ -64,14 +51,14 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(60.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Logo(size: 100), // Display logo at the top of the screen
-              Form(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Logo(size: 100), // Display logo at the top of the screen
+            Center(
+              child: Form(
                 key: _formKey, // Reference the form to enable validation
                 child: Column(
                   children: <Widget>[
@@ -100,6 +87,24 @@ class _LoginPageState extends State<LoginPage> {
                       formKey:
                           _formKey, // Pass formKey to ensure form validation
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text('Don\'t have an account?'),
+                        TextButton(
+                          onPressed: () {
+                            context.go('/signup');
+                          },
+                          child: const Text('Signup',
+                              style: TextStyle(
+                                  fontFamily: 'sans-serif',
+                                  fontSize: 15,
+                                  color: Colors
+                                      .blue) // Add a text button to navigate to the signup page
+                              ),
+                        ),
+                      ],
+                    ),
                     // Display error message (if any)
                     if (_errorMessage != null)
                       Padding(
@@ -111,9 +116,9 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                   ],
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );
