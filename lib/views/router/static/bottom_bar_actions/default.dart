@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../views/main.dart' show AppColors;
 
 List<Widget> getDefaultBottomBarActions(BuildContext context, int pageIndex) {
-  double iconSize = 41;
+  double iconSize = 34;
   return [
     IconButton(
       icon: const Icon(Icons.home_outlined),

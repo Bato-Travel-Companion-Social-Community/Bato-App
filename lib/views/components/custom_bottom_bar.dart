@@ -30,7 +30,7 @@ class CustomBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      height: 65.0,
+      height: 70.0,
       shape: const CircularNotchedRectangle(),
       color: Theme.of(context)
           .scaffoldBackgroundColor, // Use the scaffold background color from the current theme
