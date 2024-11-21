@@ -1,46 +1,45 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show MyCommunityImagePost;
+import '../../views/main.dart ' show MyCommunityImagePost;
+import '../../controllers/main.dart' show PostsService;
 
 class MyCommunityPage extends StatelessWidget {
   const MyCommunityPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        children: [
-          MyCommunityImagePost(
-            ownerName: 'John Doe',
-            location: 'San Francisco, CA',
-            profileImageUrl:
-                'https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', // Example profile picture URL
-            imageUrl:
-                'https://www.wns.co.za/Portals/0/Images/HeaderBanner/desktop/1087/53/travel_HD.jpg', // Example post image URL
-            bio: 'Exploring the beauty of nature! 🌿✨',
-          ),
-          MyCommunityImagePost(
-            ownerName: 'John Doe',
-            location: 'San Francisco, CA',
-            profileImageUrl:
-                'https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            imageUrl:
-                'https://images.pexels.com/photos/28271625/pexels-photo-28271625/free-photo-of-carretera-trafico-paisaje-arena.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            bio: 'Exploring the beauty of nature! 🌿✨',
-          ),
-          MyCommunityImagePost(
-            ownerName: 'John Doe',
-            location: 'San Francisco, CA',
-            profileImageUrl:
-                'https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            imageUrl:
-                'https://images.pexels.com/photos/28931627/pexels-photo-28931627/free-photo-of-calabazas-blancas-y-naranjas-en-una-escena-de-cosecha-de-otono.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            bio: 'Exploring the beauty of nature! 🌿✨',
-          ),
-          Container(
-            height: 200, // Add a height to the container
-            color: Colors.yellow,
-          ),
-        ],
-      ),
+    final PostsService postsService = PostsService();
+
+    return FutureBuilder<List<dynamic>?>(
+      future: postsService.getAllImagePosts(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          return Center(child: Text('Error: ${snapshot.error}'));
+        } else if (snapshot.hasData) {
+          final posts = snapshot.data;
+          if (posts == null || posts.isEmpty) {
+            return const Center(child: Text('No posts available.'));
+          }
+          return ListView.builder(
+            itemCount: posts.length,
+            itemBuilder: (context, index) {
+              final post = posts[index];
+              return MyCommunityImagePost(
+                ownerName: post['ownerId']['display_name'] ?? 'Unknown',
+                location: post['location'] ?? 'Unknown location',
+                profileImageUrl: post['ownerId']['avatar'] ?? '',
+                imageUrl: post['images'][0] ??
+                    '', // Assuming there is at least one image
+                bio: post['caption'] ?? '',
+              );
+            },
+          );
+        } else {
+          return const Center(child: Text('No posts available.'));
+        }
+      },
     );
   }
 }
