@@ -132,7 +132,7 @@ class MyProfilePage extends StatelessWidget {
         child: Text(
           title,
           style: const TextStyle(
-            fontSize: 18,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -150,7 +150,7 @@ class MyProfilePage extends StatelessWidget {
           crossAxisCount: 3,
           crossAxisSpacing: 8,
           mainAxisSpacing: 8,
-          childAspectRatio: 0.8,
+          childAspectRatio: 0.7,
         ),
         itemCount: destinations.length,
         itemBuilder: (context, index) {
