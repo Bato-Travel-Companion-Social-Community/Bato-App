@@ -7,7 +7,7 @@ import './services/main.dart'
 class AuthService {
   // Instances of the login, signup, and logout services
 
-  static const String baseUrl = 'http://192.168.1.132:5000/api/auth';
+  static const String baseUrl = 'http://10.22.8.44:5001/api/auth';
   final LoginService _loginService = LoginService(baseUrl: baseUrl);
   final SignupService _signupService = SignupService(baseUrl: baseUrl);
   final LogoutService _logoutService = LogoutService();
@@ -53,6 +53,7 @@ class AuthService {
   /// Checks if the user is logged in by validating if a token exists.
   Future<bool> isUserLoggedIn() async {
     // Remove token for testing
+    await _tokenService.deleteToken();
     await _tokenService.printAllStoredData();
     String? token = await _tokenService.getToken(); // Retrieve token
     return token != null && token.isNotEmpty; // Return true if token exists
