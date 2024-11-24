@@ -24,7 +24,6 @@ class GetImagePostsService {
       );
 
       if (response.statusCode == 200) {
-        print(response.body);
         return json.decode(response.body); // Directly return the list of posts
       } else {
         final responseData = json.decode(response.body);
