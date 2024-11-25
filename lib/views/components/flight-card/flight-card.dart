@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../index.dart' show AppColors, AppTextStyles;
+import '../../index.dart' show AppTextStyles;
 
 class OneWayFlightCard extends StatelessWidget {
   final String origin;
