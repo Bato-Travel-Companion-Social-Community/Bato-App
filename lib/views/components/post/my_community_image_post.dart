@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'post_top_bar.dart';
-import 'post_image.dart';
-import 'post_bio.dart';
-import 'post_bottom_bar.dart';
+import 'blocks/index.dart' show PostTopBar, PostImage, PostBottomBar, PostBio;
 
 class MyCommunityImagePost extends StatelessWidget {
   final String ownerName;
