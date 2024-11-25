@@ -11,6 +11,9 @@ export 'components/custom_app_bar.dart';
 export 'components/custom_bottom_bar.dart';
 export 'components/posts/my_community_image_post.dart';
 
+export 'components/flight-card/flight-card.dart';
+export 'components/hotel-card/hotel-card.dart';
+
 // pages
 export 'pages/splash.dart';
 export 'pages/login.dart';
