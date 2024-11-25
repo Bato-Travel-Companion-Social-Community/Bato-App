@@ -1,8 +1,8 @@
 import 'dart:async'; // For Timer
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../controllers/main.dart' show AuthService;
-import '../../views/main.dart' show SplashPage; // Import SplashPage
+import '../../controllers/index.dart' show AuthService;
+import '../index.dart' show SplashPage; // Import SplashPage
 
 class HomePage extends StatefulWidget {
   @override

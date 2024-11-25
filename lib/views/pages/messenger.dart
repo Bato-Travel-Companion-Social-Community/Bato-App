@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show Logo; // Import the Logo widget
+import '../index.dart' show Logo; // Import the Logo widget
 
 class MessengerPage extends StatelessWidget {
   const MessengerPage({super.key});

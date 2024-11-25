@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'views/main.dart' show AppTheme, MainGoRouter;
+import 'views/index.dart' show AppTheme, MainGoRouter;
 
 void main() {
   runApp(const MyApp());

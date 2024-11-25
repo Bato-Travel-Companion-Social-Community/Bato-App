@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../views/main.dart' show AppTextStyles;
+import '../../index.dart' show AppTextStyles;
 
 class HotelCard extends StatelessWidget {
   final String hotelName;

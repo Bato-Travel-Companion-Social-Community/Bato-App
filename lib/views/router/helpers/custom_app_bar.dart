@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../views/main.dart' show CustomAppBar;
-import '../static/main.dart'
+import '../../index.dart' show CustomAppBar;
+import '../static/index.dart'
     show getMyCommunityPageAppBarActions, getMyProfilePageAppBarActions;
 
 /// A function that returns a customized [CustomAppBar] based on the current route path.

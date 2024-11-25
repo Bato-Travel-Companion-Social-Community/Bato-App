@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show MyCommunityImagePost;
-import '../../controllers/main.dart' show PostsService;
+import '../index.dart' show MyCommunityImagePost;
+import '../../controllers/index.dart' show PostsService;
 
 class MyCommunityPage extends StatelessWidget {
   const MyCommunityPage({super.key});

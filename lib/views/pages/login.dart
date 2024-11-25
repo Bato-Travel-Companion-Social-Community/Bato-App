@@ -1,8 +1,8 @@
 // lib/views/pages/login_page.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../views/main.dart' show Logo, TextInputField, CustomButton;
-import '../../controllers/main.dart' show AuthService;
+import '../index.dart' show Logo, TextInputField, CustomButton;
+import '../../controllers/index.dart' show AuthService;
 
 class LoginPage extends StatefulWidget {
   @override

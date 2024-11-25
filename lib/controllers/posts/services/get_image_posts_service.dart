@@ -1,6 +1,6 @@
 import 'dart:convert'; // Import for JSON encoding/decoding
 import 'package:http/http.dart' as http; // HTTP client for making requests
-import '../../auth/services/main.dart'
+import '../../auth/services/index.dart'
     show TokenService; // Importing TokenService to handle token storage
 
 class GetImagePostsService {

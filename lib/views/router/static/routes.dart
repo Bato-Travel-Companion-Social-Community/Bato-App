@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../views/main.dart'
+import '../../index.dart'
     show
         MyCommunityPage,
         ExplorePage,

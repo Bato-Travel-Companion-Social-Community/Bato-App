@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../controllers/main.dart' show AuthService; // Import AuthService
-import '../../views/main.dart' show Logo; // Import Logo widget
+import '../../controllers/index.dart' show AuthService; // Import AuthService
+import '../index.dart' show Logo; // Import Logo widget
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});

@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'static/main.dart' show routes;
+import 'static/index.dart' show routes;
 
 /// A function that creates and returns a [GoRouter] instance.
 ///

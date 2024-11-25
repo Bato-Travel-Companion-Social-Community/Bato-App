@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../views/main.dart' show CustomBottomBar;
-import '../static/main.dart' show getDefaultBottomBarActions;
+import '../../index.dart' show CustomBottomBar;
+import '../static/index.dart' show getDefaultBottomBarActions;
 
 /// A function that determines the index of the active page in the bottom navigation bar.
 ///

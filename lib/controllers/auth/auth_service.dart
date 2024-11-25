@@ -1,4 +1,4 @@
-import './services/main.dart'
+import 'services/index.dart'
     show LoginService, SignupService, LogoutService, TokenService;
 
 /// AuthService is a central service responsible for managing user authentication processes.

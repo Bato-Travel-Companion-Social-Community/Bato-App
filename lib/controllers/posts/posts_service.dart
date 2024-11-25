@@ -1,4 +1,4 @@
-import 'services/main.dart' show GetImagePostsService;
+import 'services/index.dart' show GetImagePostsService;
 
 class PostsService {
   static const String baseUrl = 'http://192.168.1.141:5000/api/post';
