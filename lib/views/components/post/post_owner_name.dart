@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../views/main.dart' show AppTextStyles;
+import '../../index.dart' show AppTextStyles;
 
 class PostOwnerName extends StatelessWidget {
   final String ownerName;
