@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show AppColors, AppTextStyles;
+import '../../index.dart' show AppColors, AppTextStyles;
 
 /// CustomButton is a reusable widget that encapsulates an ElevatedButton with
 /// customizable text, action, and styling. It also integrates optional form validation

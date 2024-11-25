@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show AppColors;
+import '../../index.dart' show AppColors;
 
 /// A custom text input field widget with optional password visibility toggle.
 ///

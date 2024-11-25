@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart' show AppTextStyles, AppColors;
+import '../../index.dart' show AppTextStyles, AppColors;
 
 /// A stateless widget that displays the logo text.
 ///

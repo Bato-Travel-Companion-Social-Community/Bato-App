@@ -4,11 +4,11 @@ export 'theme/app_theme.dart';
 export 'theme/app_text_styles.dart';
 
 // components
-export 'components/logo.dart';
-export 'components/text_input_field.dart';
-export 'components/custom_button.dart';
-export 'components/custom_app_bar.dart';
-export 'components/custom_bottom_bar.dart';
+export 'components/logo/logo.dart';
+export 'components/inputs/text_input_field.dart';
+export 'components/buttons/custom_button.dart';
+export 'components/app_bar/custom_app_bar.dart';
+export 'components/bottom_bar/custom_bottom_bar.dart';
 export 'components/posts/my_community_image_post.dart';
 
 export 'components/flight-card/flight-card.dart';

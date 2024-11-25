@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../views/main.dart'
+import '../../index.dart'
     show Logo; // Assuming Logo is defined in views/main.dart
 
 /// A custom AppBar widget that includes a logo and optional actions.
