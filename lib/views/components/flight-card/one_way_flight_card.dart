@@ -32,7 +32,6 @@ class OneWayFlightCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Check if the app is in dark mode
-    bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return Card(
         color: Theme.of(context).scaffoldBackgroundColor,
