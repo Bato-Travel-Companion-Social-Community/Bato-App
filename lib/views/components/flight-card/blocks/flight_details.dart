@@ -22,7 +22,7 @@ class FlightDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.only(left: 5.0, bottom: 8.0),
       child: Column(
         children: [
           FlightDetailsTopRow(

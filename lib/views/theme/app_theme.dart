@@ -20,6 +20,8 @@ class AppTheme {
     primaryColorLight: AppColors.darkBackground,
     primaryColorDark: AppColors.lightBackground,
 
+    shadowColor: Color(0xffD3D3D3),
+
     // The background color for scaffold widgets.
     scaffoldBackgroundColor: AppColors.lightBackground,
 
@@ -72,6 +74,7 @@ class AppTheme {
     primaryColorLight: AppColors.darkBackground,
     primaryColorDark: AppColors.lightBackground,
     scaffoldBackgroundColor: AppColors.darkBackground,
+    shadowColor: Color(0xffD3D3D3),
     brightness: Brightness.dark,
     fontFamily: 'sans-serif', // Explicitly set to sans-serif
     textTheme: TextTheme(

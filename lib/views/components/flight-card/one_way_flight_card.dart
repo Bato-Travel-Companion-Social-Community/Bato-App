@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import ',,/../../../../views/index.dart' show AppTextStyles;
-import 'blocks/index.dart' show FlightAirlineName, FlightDetails, FlightPrice;
+import 'blocks/index.dart'
+    show FlightAirlineName, FlightDetails, FlightPrice, AirlineLogo;
 
 class OneWayFlightCard extends StatelessWidget {
   final String origin;
@@ -12,6 +13,7 @@ class OneWayFlightCard extends StatelessWidget {
   final String flightNumber;
   final String flightStatus;
   final String duration;
+  final String airlineLogoUrl;
 
   OneWayFlightCard({
     super.key,
@@ -24,6 +26,7 @@ class OneWayFlightCard extends StatelessWidget {
     required this.flightNumber,
     required this.flightStatus,
     required this.duration,
+    required this.airlineLogoUrl,
   });
 
   @override
@@ -32,24 +35,25 @@ class OneWayFlightCard extends StatelessWidget {
     bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return Card(
-        elevation: 2,
         color: Theme.of(context).scaffoldBackgroundColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-          side: isDarkMode
-              ? BorderSide(
-                  color: Theme.of(context)
-                      .primaryColor, // Border color in dark mode
-                  width: 2,
-                )
-              : BorderSide.none, // No border in light mode
-        ),
+            borderRadius: BorderRadius.circular(15),
+            side: BorderSide(
+              color:
+                  Theme.of(context).primaryColor, // Border color in dark mode
+              width: 2,
+            ) // No border in light mode
+            ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              FlightAirlineName(airlineName: airlineName),
+              Row(
+                children: [
+                  AirlineLogo(airlineLogoUrl: airlineLogoUrl),
+                ],
+              ),
               FlightDetails(
                 origin: origin,
                 destination: destination,
