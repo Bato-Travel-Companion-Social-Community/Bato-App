@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../index.dart' show AppColors, OneWayFlightCard, HotelCard;
+import '../index.dart' show AppColors, OneWayFlightCard, StayCard;
 
 class PlanTripPage extends StatelessWidget {
   const PlanTripPage({super.key});
@@ -140,7 +140,7 @@ class PlanTripPage extends StatelessWidget {
                   ),
                   child: ListView(
                     children: [
-                      HotelCard(
+                      StayCard(
                           hotelName: 'Casablato',
                           hotelLocation: 'Morocco',
                           pricePerNight: '200',
@@ -149,7 +149,7 @@ class PlanTripPage extends StatelessWidget {
                               'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                           reviewCount: '200',
                           onBookNowPressed: () {}),
-                      HotelCard(
+                      StayCard(
                           hotelName: 'Casablato',
                           hotelLocation: 'Morocco',
                           pricePerNight: '200',
@@ -158,7 +158,7 @@ class PlanTripPage extends StatelessWidget {
                               'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                           reviewCount: '200',
                           onBookNowPressed: () {}),
-                      HotelCard(
+                      StayCard(
                           hotelName: 'Casablato',
                           hotelLocation: 'Morocco',
                           pricePerNight: '200',
@@ -167,7 +167,7 @@ class PlanTripPage extends StatelessWidget {
                               'https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                           reviewCount: '200',
                           onBookNowPressed: () {}),
-                      HotelCard(
+                      StayCard(
                           hotelName: 'Casablato',
                           hotelLocation: 'Morocco',
                           pricePerNight: '200',
@@ -176,7 +176,7 @@ class PlanTripPage extends StatelessWidget {
                               'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                           reviewCount: '200',
                           onBookNowPressed: () {}),
-                      HotelCard(
+                      StayCard(
                           hotelName: 'Casablato',
                           hotelLocation: 'Morocco',
                           pricePerNight: '200',
@@ -185,7 +185,7 @@ class PlanTripPage extends StatelessWidget {
                               'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                           reviewCount: '200',
                           onBookNowPressed: () {}),
-                      HotelCard(
+                      StayCard(
                           hotelName: 'Casablato',
                           hotelLocation: 'Morocco',
                           pricePerNight: '200',

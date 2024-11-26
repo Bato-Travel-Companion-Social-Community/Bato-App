@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../index.dart' show AppTextStyles;
 
-class HotelCard extends StatelessWidget {
+class StayCard extends StatelessWidget {
   final String hotelName;
   final String hotelLocation;
   final String pricePerNight;
@@ -10,7 +10,7 @@ class HotelCard extends StatelessWidget {
   final String reviewCount;
   final VoidCallback onBookNowPressed;
 
-  HotelCard({
+  StayCard({
     required this.hotelName,
     required this.hotelLocation,
     required this.pricePerNight,
