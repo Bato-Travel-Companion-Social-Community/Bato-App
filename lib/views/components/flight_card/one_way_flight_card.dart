@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import ',,/../../../../views/index.dart' show AppTextStyles;
+import '../../index.dart' show AppTextStyles;
 import 'blocks/index.dart'
     show FlightAirlineName, FlightDetails, FlightPrice, AirlineLogo;
 

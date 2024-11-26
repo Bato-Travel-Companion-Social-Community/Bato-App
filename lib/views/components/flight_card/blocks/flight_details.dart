@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../blocks/index.dart' show FlightDetailsTopRow, FlightDetailsBottomRow;
+import 'index.dart' show FlightDetailsTopRow, FlightDetailsBottomRow;
 
 class FlightDetails extends StatelessWidget {
   final String origin;
