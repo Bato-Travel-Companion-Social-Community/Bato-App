@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../index.dart' show AppTextStyles;
+import './blocks/index.dart' show StayCardImage;
 
 class StayCard extends StatelessWidget {
   final String hotelName;
@@ -41,18 +42,7 @@ class StayCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Hotel image
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(12),
-              topRight: Radius.circular(12),
-            ),
-            child: Image.network(
-              imageUrl,
-              width: double.infinity,
-              height: 200,
-              fit: BoxFit.cover,
-            ),
-          ),
+          StayCardImage(imageUrl: imageUrl),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Column(
