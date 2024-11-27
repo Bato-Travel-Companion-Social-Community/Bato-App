@@ -40,7 +40,7 @@ class OneWayFlightCard extends StatelessWidget {
             side: BorderSide(
               color:
                   Theme.of(context).primaryColor, // Border color in dark mode
-              width: 2,
+              width: 1,
             ) // No border in light mode
             ),
         child: Padding(

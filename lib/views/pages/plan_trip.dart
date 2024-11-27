@@ -141,56 +141,11 @@ class PlanTripPage extends StatelessWidget {
                   child: ListView(
                     children: [
                       StayCard(
-                          hotelName: 'Casablato',
-                          hotelLocation: 'Morocco',
+                          propertyName: 'Casablato',
+                          propertyLocation: 'Morocco',
                           pricePerNight: '200',
                           rating: '4.5',
-                          imageUrl:
-                              'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                          reviewCount: '200',
-                          onBookNowPressed: () {}),
-                      StayCard(
-                          hotelName: 'Casablato',
-                          hotelLocation: 'Morocco',
-                          pricePerNight: '200',
-                          rating: '4.5',
-                          imageUrl:
-                              'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                          reviewCount: '200',
-                          onBookNowPressed: () {}),
-                      StayCard(
-                          hotelName: 'Casablato',
-                          hotelLocation: 'Morocco',
-                          pricePerNight: '200',
-                          rating: '4.5',
-                          imageUrl:
-                              'https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                          reviewCount: '200',
-                          onBookNowPressed: () {}),
-                      StayCard(
-                          hotelName: 'Casablato',
-                          hotelLocation: 'Morocco',
-                          pricePerNight: '200',
-                          rating: '4.5',
-                          imageUrl:
-                              'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                          reviewCount: '200',
-                          onBookNowPressed: () {}),
-                      StayCard(
-                          hotelName: 'Casablato',
-                          hotelLocation: 'Morocco',
-                          pricePerNight: '200',
-                          rating: '4.5',
-                          imageUrl:
-                              'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                          reviewCount: '200',
-                          onBookNowPressed: () {}),
-                      StayCard(
-                          hotelName: 'Casablato',
-                          hotelLocation: 'Morocco',
-                          pricePerNight: '200',
-                          rating: '4.5',
-                          imageUrl:
+                          propertyImageUrl:
                               'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                           reviewCount: '200',
                           onBookNowPressed: () {}),
