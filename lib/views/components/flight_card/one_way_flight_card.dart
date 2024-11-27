@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../index.dart' show AppTextStyles;
 import 'blocks/index.dart'
-    show FlightAirlineName, FlightDetails, FlightPrice, AirlineLogo;
+    show FlightAirlineName, FlightDetails, FLightDealRow, AirlineLogo;
 
 class OneWayFlightCard extends StatelessWidget {
   final String origin;
@@ -63,7 +63,7 @@ class OneWayFlightCard extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
-                child: FlightPrice(price: price),
+                child: FLightDealRow(price: price),
               ),
             ],
           ),

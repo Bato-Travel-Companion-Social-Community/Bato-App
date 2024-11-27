@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../views/index.dart' show AppTextStyles;
 
-class StayViewDeal extends StatelessWidget {
-  StayViewDeal({super.key});
+class FlightViewDeal extends StatelessWidget {
+  FlightViewDeal({super.key});
 
   @override
   Widget build(BuildContext context) {

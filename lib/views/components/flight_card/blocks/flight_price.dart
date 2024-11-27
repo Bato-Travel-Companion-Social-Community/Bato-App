@@ -10,19 +10,14 @@ class FlightPrice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Text(
-          '$price',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            fontFamily: AppTextStyles.fontFamilyPrimary,
-            color: Theme.of(context).primaryColor,
-          ),
-        ),
-      ],
+    return Text(
+      '$price',
+      style: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        fontFamily: AppTextStyles.fontFamilyPrimary,
+        color: Theme.of(context).primaryColor,
+      ),
     );
   }
 }
