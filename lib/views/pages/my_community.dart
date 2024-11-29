@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../index.dart' show MyCommunityImagePost;
+import '../index.dart' show MyCommunityPost;
 import '../../controllers/index.dart' show PostsService;
+import '../../models/index.dart' show MyCommunityPostModel;
 
 class MyCommunityPage extends StatelessWidget {
   const MyCommunityPage({super.key});
@@ -9,34 +10,30 @@ class MyCommunityPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final PostsService postsService = PostsService();
 
-    return FutureBuilder<List<dynamic>?>(
-      future: postsService.getAllImagePosts(),
+    return FutureBuilder<List<MyCommunityPostModel>?>(
+      future: PostsService().getAllImagePosts(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
+          return CircularProgressIndicator();
         } else if (snapshot.hasError) {
-          return Center(child: Text('Error: ${snapshot.error}'));
-        } else if (snapshot.hasData) {
-          final posts = snapshot.data;
-          if (posts == null || posts.isEmpty) {
-            return const Center(child: Text('No posts available.'));
-          }
+          return Text('Error: ${snapshot.error}');
+        } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return Text('No posts found.');
+        } else {
+          final posts = snapshot.data!;
           return ListView.builder(
             itemCount: posts.length,
             itemBuilder: (context, index) {
               final post = posts[index];
-              return MyCommunityImagePost(
-                ownerName: post['ownerId']['display_name'] ?? 'Unknown',
-                location: post['location'] ?? 'Unknown location',
-                profileImageUrl: post['ownerId']['avatar'] ?? '',
-                imageUrl: post['images'][0] ??
-                    '', // Assuming there is at least one image
-                bio: post['caption'] ?? '',
+              return MyCommunityPost(
+                postOwnerName: post.owner.displayName,
+                postLocation: post.location,
+                postProfileImageUrl: post.owner.avatar,
+                imageUrls: post.images, // Use the first image as an example
+                postCaption: post.caption,
               );
             },
           );
-        } else {
-          return const Center(child: Text('No posts available.'));
         }
       },
     );

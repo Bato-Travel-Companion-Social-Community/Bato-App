@@ -4,16 +4,16 @@ import 'post_owner_name.dart';
 import 'post_location.dart';
 
 class PostTopBar extends StatelessWidget {
-  final String ownerName;
-  final String location;
-  final String profileImageUrl;
+  final String postOwnerName;
+  final String postLocation;
+  final String postProfileImageUrl;
 
   const PostTopBar({
-    super.key,
-    required this.ownerName,
-    required this.location,
-    required this.profileImageUrl,
-  });
+    Key? key,
+    required this.postOwnerName,
+    required this.postLocation,
+    required this.postProfileImageUrl,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +21,13 @@ class PostTopBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
       child: Row(
         children: [
-          PostProfileImage(profileImageUrl: profileImageUrl),
+          PostProfileImage(profileImageUrl: postProfileImageUrl),
           const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              PostOwnerName(ownerName: ownerName),
-              PostLocation(location: location),
+              PostOwnerName(ownerName: postOwnerName),
+              PostLocation(location: postLocation),
             ],
           ),
         ],

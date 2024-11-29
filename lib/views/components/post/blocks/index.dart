@@ -5,3 +5,4 @@ export 'post_profile_image.dart';
 export 'post_image.dart';
 export 'post_bio.dart';
 export 'post_bottom_bar.dart';
+export 'post_details.dart';
