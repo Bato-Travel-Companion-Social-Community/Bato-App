@@ -2,6 +2,8 @@ import 'dart:convert'; // Import for JSON encoding/decoding
 import 'package:http/http.dart' as http; // HTTP client for making requests
 import '../../auth/services/index.dart'
     show TokenService; // Importing TokenService to handle token storage
+import '../../../models/index.dart'
+    show MyCommunityPostModel; // Import MyCommunityPostModel
 
 class GetImagePostsService {
   final String baseUrl;
@@ -12,7 +14,7 @@ class GetImagePostsService {
   // Instance of TokenService to securely save and manage the JWT token
   final TokenService _tokenService = TokenService();
 
-  Future<List<dynamic>?> getAllImagePosts() async {
+  Future<List<MyCommunityPostModel>?> getAllImagePosts() async {
     try {
       final token = await _tokenService.getToken();
       final response = await http.get(
@@ -24,8 +26,12 @@ class GetImagePostsService {
       );
 
       if (response.statusCode == 200) {
-        print(response.body);
-        return json.decode(response.body); // Directly return the list of posts
+        final List<dynamic> responseData = json.decode(response.body);
+
+        // Convert JSON to List<MyCommunityPostModel>
+        return responseData
+            .map((postJson) => MyCommunityPostModel.fromJson(postJson))
+            .toList();
       } else {
         final responseData = json.decode(response.body);
         throw Exception(responseData['message'] ?? 'Unknown error');
