@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../index.dart' show Logo, TextInputField, CustomButton;
-import '../../controllers/index.dart' show AuthService;
+import '../../index.dart' show Logo, TextInputField, CustomButton;
+import '../../../controllers/index.dart' show AuthService;
 
 class SignupPage extends StatefulWidget {
   @override

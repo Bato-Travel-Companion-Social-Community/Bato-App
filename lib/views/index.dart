@@ -16,16 +16,16 @@ export 'components/flight_card/one_way_flight_card.dart';
 export 'components/stay_card/stay_card.dart';
 
 // pages
-export 'pages/splash.dart';
-export 'pages/login.dart';
-export 'pages/signup.dart';
-export 'pages/home.dart';
-export 'pages/explore.dart';
-export 'pages/plan_trip.dart';
-export 'pages/my_profile.dart';
-export 'pages/my_community.dart';
+export 'pages/splash/splash.dart';
+export 'pages/login/login.dart';
+export 'pages/signup/signup.dart';
+export 'pages/home/home.dart';
+export 'pages/explore/explore.dart';
+export 'pages/plan_trip/plan_trip.dart';
+export 'pages/my_profile/my_profile.dart';
+export 'pages/my_community/my_community.dart';
 export 'pages/messenger.dart';
-export 'pages/add_post.dart';
+export 'pages/add_post/add_post.dart';
 
 // router
 export 'router/main_go_router.dart';

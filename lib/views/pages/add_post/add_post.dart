@@ -3,7 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../../views/index.dart' show AddPostPreview, AppTextStyles;
+import '../../index.dart' show AddPostPreview, AppTextStyles;
 
 class AddPostPage extends StatefulWidget {
   @override

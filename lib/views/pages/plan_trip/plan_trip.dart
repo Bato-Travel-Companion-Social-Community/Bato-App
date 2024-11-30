@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../index.dart' show AppColors, OneWayFlightCard, StayCard;
+import '../../index.dart' show AppColors, OneWayFlightCard, StayCard;
 
 class PlanTripPage extends StatelessWidget {
   const PlanTripPage({super.key});

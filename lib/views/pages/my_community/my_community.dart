@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../index.dart' show MyCommunityPost;
-import '../../controllers/index.dart' show PostsService;
-import '../../models/index.dart' show MyCommunityPostModel;
+import '../../index.dart' show MyCommunityPost;
+import '../../../controllers/index.dart' show PostsService;
+import '../../../models/index.dart' show MyCommunityPostModel;
 
 class MyCommunityPage extends StatelessWidget {
   const MyCommunityPage({super.key});
