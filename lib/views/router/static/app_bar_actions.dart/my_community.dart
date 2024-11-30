@@ -6,7 +6,7 @@ List<Widget> getMyCommunityPageAppBarActions(BuildContext context) {
   return [
     IconButton(
       icon: const FaIcon(FontAwesomeIcons.bell),
-      iconSize: 28,
+      iconSize: 20.0,
       color: Theme.of(context).primaryColor,
       onPressed: () {
         print("Notifications tapped");
@@ -14,7 +14,7 @@ List<Widget> getMyCommunityPageAppBarActions(BuildContext context) {
     ),
     IconButton(
       icon: const FaIcon(FontAwesomeIcons.message),
-      iconSize: 28,
+      iconSize: 20.0,
       color: Theme.of(context).primaryColor,
       onPressed: () {
         print("Messages tapped");
