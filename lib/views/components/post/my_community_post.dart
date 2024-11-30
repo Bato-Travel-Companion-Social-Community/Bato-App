@@ -19,7 +19,7 @@ class MyCommunityPost extends StatelessWidget {
 
   // PageController with initial page set to 1
   final PageController _controller =
-      PageController(initialPage: 1, viewportFraction: 0.95);
+      PageController(initialPage: 1, viewportFraction: 0.90);
 
   @override
   Widget build(BuildContext context) {
