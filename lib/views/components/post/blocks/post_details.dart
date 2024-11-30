@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './index.dart' show PostTopBar, PostCaption;
+import './index.dart' show PostTopBar, PostCaption, PostBottomBar;
 
 class PostDetails extends StatelessWidget {
   final String postOwnerName;
@@ -37,6 +37,7 @@ class PostDetails extends StatelessWidget {
                 postLocation: postLocation,
                 postProfileImageUrl: postProfileImageUrl),
             PostCaption(postCaption: postCaption),
+            PostBottomBar(),
           ],
         ),
       ),

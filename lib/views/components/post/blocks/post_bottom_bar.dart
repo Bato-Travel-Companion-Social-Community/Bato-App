@@ -13,37 +13,25 @@ class PostBottomBar extends StatelessWidget {
         horizontal: 10.0,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              IconButton(
-                icon: FaIcon(FontAwesomeIcons.heart),
-                iconSize: iconSize,
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: FaIcon(FontAwesomeIcons.comment),
-                iconSize: iconSize,
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: FaIcon(FontAwesomeIcons.paperPlane),
-                iconSize: iconSize,
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onPressed: () {},
-              ),
-            ],
+          IconButton(
+            icon: FaIcon(FontAwesomeIcons.heart),
+            iconSize: iconSize,
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.luggage_outlined),
-            iconSize: 30,
+            icon: FaIcon(FontAwesomeIcons.comment),
+            iconSize: iconSize,
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: FaIcon(FontAwesomeIcons.paperPlane),
+            iconSize: iconSize,
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             onPressed: () {},
