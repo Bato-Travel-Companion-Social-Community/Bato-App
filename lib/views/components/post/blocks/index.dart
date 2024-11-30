@@ -6,3 +6,4 @@ export 'post_image.dart';
 export 'post_caption.dart';
 export 'post_bottom_bar.dart';
 export 'post_details.dart';
+export 'post_image_from_file.dart';
