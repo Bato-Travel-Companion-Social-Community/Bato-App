@@ -23,8 +23,8 @@ class MyCommunityPost extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1, // Maintains a 1:1 aspect ratio (square)
+    return SizedBox(
+      height: 500.0, // Maintains a 1:1 aspect ratio (square)
       child: PageView.builder(
         controller: _controller,
         scrollDirection: Axis.horizontal, // Set scroll direction to horizontal

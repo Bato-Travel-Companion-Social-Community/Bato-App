@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './index.dart' show PostTopBar, PostCaption;
 
 class PostDetails extends StatelessWidget {
   final String postOwnerName;
@@ -27,6 +28,16 @@ class PostDetails extends StatelessWidget {
             color: Theme.of(context).primaryColor,
             width: 1,
           ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            PostTopBar(
+                postOwnerName: postOwnerName,
+                postLocation: postLocation,
+                postProfileImageUrl: postProfileImageUrl),
+            PostCaption(postCaption: postCaption),
+          ],
         ),
       ),
     );
