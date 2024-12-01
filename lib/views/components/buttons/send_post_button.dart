@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:bato_app/views/index.dart' show AppTextStyles;
+import 'package:bato_app/controllers/index.dart' show AddPostService;
 
 // ignore: must_be_immutable
 class SendPostButton extends StatelessWidget {
@@ -27,10 +28,11 @@ class SendPostButton extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          // Send the post data
-          print('Sending post data...');
-          print('Caption: $caption');
-          print('Files: $files');
+          AddPostService().addPostService(
+            images: files,
+            caption: caption,
+            location: 'Berlin, Germany',
+          );
         },
         child: Text(
           'Post',
