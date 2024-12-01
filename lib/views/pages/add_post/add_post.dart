@@ -51,6 +51,13 @@ class _AddPostPageState extends State<AddPostPage> {
     }
   }
 
+  // Method to clear the files list
+  void _clearFiles() {
+    setState(() {
+      files.clear();
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -62,7 +69,6 @@ class _AddPostPageState extends State<AddPostPage> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        // Display selected images as thumbnails
         files.isEmpty
             ? SizedBox(
                 height: 500,
@@ -78,7 +84,6 @@ class _AddPostPageState extends State<AddPostPage> {
                 ),
               )
             : AddPostPreview(imagePaths: files),
-
         Spacer(),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

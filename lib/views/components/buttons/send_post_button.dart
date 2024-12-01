@@ -1,7 +1,9 @@
 import 'dart:io';
+import 'package:bato_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:bato_app/views/index.dart' show AppTextStyles;
 import 'package:bato_app/controllers/index.dart' show AddPostService;
+import 'package:go_router/go_router.dart';
 
 // ignore: must_be_immutable
 class SendPostButton extends StatelessWidget {
@@ -33,6 +35,8 @@ class SendPostButton extends StatelessWidget {
             caption: caption,
             location: 'Berlin, Germany',
           );
+
+          context.go('/my_community');
         },
         child: Text(
           'Post',
