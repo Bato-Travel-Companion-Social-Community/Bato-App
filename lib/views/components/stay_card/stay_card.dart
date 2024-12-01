@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../index.dart' show AppTextStyles;
 import './blocks/index.dart' show StayCardImage, StayDetails;
 
 class StayCard extends StatelessWidget {
