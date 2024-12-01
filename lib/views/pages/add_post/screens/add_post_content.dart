@@ -5,7 +5,7 @@ import 'package:bato_app/views/index.dart'
     show PostCaptionInputField, AddPostCaptionAppBar;
 
 class AddPostContent extends StatefulWidget {
-  List<File> files;
+  final List<File> files;
 
   AddPostContent({required this.files});
   @override

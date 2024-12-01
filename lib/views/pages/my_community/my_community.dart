@@ -8,8 +8,6 @@ class MyCommunityPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final PostsService postsService = PostsService();
-
     return FutureBuilder<List<MyCommunityPostModel>?>(
       future: PostsService().getAllImagePosts(),
       builder: (context, snapshot) {
