@@ -26,12 +26,10 @@ class _AddPostPageState extends State<AddPostPage> {
   Future<void> _pickImagesFromGallery() async {
     final pickedFiles =
         await _picker.pickMultiImage(); // Allow multiple selection
-    if (pickedFiles != null) {
-      setState(() {
-        files.addAll(
-            pickedFiles.map((pickedFile) => File(pickedFile.path)).toList());
-      });
-    }
+    setState(() {
+      files.addAll(
+          pickedFiles.map((pickedFile) => File(pickedFile.path)).toList());
+    });
   }
 
   // Function to take a picture with the camera
@@ -45,7 +43,7 @@ class _AddPostPageState extends State<AddPostPage> {
   }
 
   // Function to submit the post (mock for now)
-  void _submitPost() {
+  void _navigateToCaption() {
     if (files.isNotEmpty) {
       context.push('/add-post-content', extra: files);
     } else {
@@ -99,7 +97,7 @@ class _AddPostPageState extends State<AddPostPage> {
               iconSize: 40,
             ),
             IconButton(
-                onPressed: _submitPost,
+                onPressed: _navigateToCaption,
                 icon: Icon(Icons.queue_play_next),
                 color: Theme.of(context).primaryColor,
                 iconSize: 30),
