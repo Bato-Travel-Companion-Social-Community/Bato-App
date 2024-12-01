@@ -35,10 +35,11 @@ class SendPostButton extends StatelessWidget {
         child: Text(
           'Post',
           style: TextStyle(
-              color: Theme.of(context).primaryColor,
-              fontSize: 16.0,
-              fontWeight: FontWeight.normal,
-              fontFamily: AppTextStyles.fontFamilyPrimary),
+            color: Theme.of(context).primaryColor,
+            fontSize: 16.0,
+            fontWeight: FontWeight.normal,
+            fontFamily: AppTextStyles.fontFamilyPrimary,
+          ),
         ),
       ),
     );

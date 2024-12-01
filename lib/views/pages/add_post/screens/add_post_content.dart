@@ -15,18 +15,23 @@ class AddPostContent extends StatefulWidget {
 class _AddPostContentState extends State<AddPostContent> {
   final TextEditingController inputController = TextEditingController();
 
+  // Initialize caption as empty string
+  String caption = '';
+
   @override
   void initState() {
     super.initState();
-    // Add listener to update the state when text changes
+    // Add a listener to update the caption on text changes
     inputController.addListener(() {
-      setState(() {});
+      setState(() {
+        // Update the caption with the latest text
+        caption = inputController.text;
+      });
     });
   }
 
   @override
   void dispose() {
-    // Dispose controller to avoid memory leaks
     inputController.dispose();
     super.dispose();
   }
@@ -36,7 +41,7 @@ class _AddPostContentState extends State<AddPostContent> {
     return Scaffold(
       appBar: AddPostCaptionAppBar(
         files: widget.files,
-        caption: inputController.text, // Automatically gets updated text
+        caption: caption, // Use the updated caption here
       ),
       body: SafeArea(
         child: Padding(

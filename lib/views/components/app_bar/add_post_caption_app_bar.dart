@@ -12,21 +12,18 @@ class AddPostCaptionAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Theme.of(context)
-          .scaffoldBackgroundColor, // Use the scaffold background color from the current theme
-      elevation: 0, // Prevent any shadow effects
-      scrolledUnderElevation:
-          0, // Prevent app bar from changing elevation on scroll
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      elevation: 0,
+      scrolledUnderElevation: 0,
       actions: [
         SendPostButton(
           files: files,
-          caption: caption,
+          caption: caption, // This will always have the updated caption
         ),
       ],
     );
   }
 
   @override
-  Size get preferredSize =>
-      const Size.fromHeight(65.0); // You can adjust the height here as needed
+  Size get preferredSize => const Size.fromHeight(65.0);
 }
