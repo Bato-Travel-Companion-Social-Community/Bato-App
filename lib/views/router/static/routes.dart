@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../index.dart'
@@ -9,6 +11,7 @@ import '../../index.dart'
         AddPostPage,
         SplashPage,
         LoginPage,
+        AddPostContent,
         SignupPage;
 import '../helpers/main.dart'
     show getPageIndexOfBottomBar, getAppBar, getBottomBar;
@@ -94,5 +97,12 @@ final List<RouteBase> routes = [
   GoRoute(
     path: '/signup', // Signup page for user registration
     builder: (context, state) => SignupPage(),
+  ),
+  GoRoute(
+    path: '/add-post-content',
+    builder: (context, state) {
+      final files = state.extra as List<File>; // Retrieve extra data
+      return AddPostContent(files: files);
+    },
   ),
 ];

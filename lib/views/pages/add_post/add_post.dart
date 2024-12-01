@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../../index.dart' show AddPostPreview, AppTextStyles;
+import 'package:bato_app/views/index.dart' show AddPostPreview, AppTextStyles;
 
 class AddPostPage extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class AddPostPage extends StatefulWidget {
 }
 
 class _AddPostPageState extends State<AddPostPage> {
-  List<File> _images = []; // Store multiple selected images
+  List<File> files = []; // Store multiple selected images
 
   final ImagePicker _picker = ImagePicker();
 
@@ -27,7 +28,7 @@ class _AddPostPageState extends State<AddPostPage> {
         await _picker.pickMultiImage(); // Allow multiple selection
     if (pickedFiles != null) {
       setState(() {
-        _images.addAll(
+        files.addAll(
             pickedFiles.map((pickedFile) => File(pickedFile.path)).toList());
       });
     }
@@ -38,16 +39,15 @@ class _AddPostPageState extends State<AddPostPage> {
     final pickedFile = await _picker.pickImage(source: ImageSource.camera);
     if (pickedFile != null) {
       setState(() {
-        _images.add(File(pickedFile.path));
+        files.add(File(pickedFile.path));
       });
     }
   }
 
   // Function to submit the post (mock for now)
   void _submitPost() {
-    if (_images.isNotEmpty) {
-      // Logic to submit the post with multiple images
-      print('Post submitted with ${_images.length} images!');
+    if (files.isNotEmpty) {
+      context.push('/add-post-content', extra: files);
     } else {
       print('No images selected!');
     }
@@ -65,7 +65,7 @@ class _AddPostPageState extends State<AddPostPage> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         // Display selected images as thumbnails
-        _images.isEmpty
+        files.isEmpty
             ? SizedBox(
                 height: 500,
                 child: Center(
@@ -79,7 +79,7 @@ class _AddPostPageState extends State<AddPostPage> {
                   ),
                 ),
               )
-            : AddPostPreview(imagePaths: _images),
+            : AddPostPreview(imagePaths: files),
 
         Spacer(),
         Row(

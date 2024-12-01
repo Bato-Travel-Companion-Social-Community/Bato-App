@@ -48,25 +48,6 @@ class AppTheme {
         fontWeight: FontWeight.bold,
       ),
     ),
-
-    // The theme for elevated buttons, defining their appearance.
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        // The background color of elevated buttons.
-        backgroundColor: AppColors.primary,
-
-        // The text style for elevated buttons, using the Fredoka font.
-        textStyle: GoogleFonts.fredoka(
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-        ),
-
-        // The shape of elevated buttons, with rounded corners.
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
-        ),
-      ),
-    ),
   );
 
   static final ThemeData darkTheme = ThemeData(
@@ -87,18 +68,6 @@ class AppTheme {
         fontSize: 22,
         fontWeight: FontWeight.bold,
       ), // Fredoka for button text
-    ),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primary,
-        textStyle: GoogleFonts.fredoka(
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
-        ),
-      ),
     ),
   );
 }
