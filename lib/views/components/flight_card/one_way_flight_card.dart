@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../index.dart' show AppTextStyles;
-import 'blocks/index.dart'
-    show FlightAirlineName, FlightDetails, FLightDealRow, AirlineLogo;
+import 'blocks/index.dart' show FlightDetails, FLightDealRow, AirlineLogo;
 
 class OneWayFlightCard extends StatelessWidget {
   final String origin;
