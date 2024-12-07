@@ -3,7 +3,8 @@ import '../../../controllers/index.dart' show ProfileService; // Import services
 import '../../../models/index.dart' show UserModel; // Import user model
 import 'package:bato_app/views/index.dart'
     show AppTextStyles, AppColors; // Import text styles
-import 'components/index.dart' show ProfileDetails; // Import profile details
+import 'components/index.dart'
+    show ProfileDetails, ProfileName; // Import profile details
 
 class MyProfilePage extends StatefulWidget {
   @override
@@ -33,26 +34,14 @@ class _MyProfilePageState extends State<MyProfilePage> {
           return Center(child: Text('No profile data found'));
         } else {
           final user = snapshot.data!;
-          return ListView(
-            padding: const EdgeInsets.all(16.0),
+          return Column(
             children: [
+              SizedBox(height: 10),
               ProfileDetails(profileAvatar: user.avatar),
-              SizedBox(height: 40), // Larger spacing for sectioning
-              Text(
-                "Welcome, ${user.displayName}!",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-              // Add more content below here, it will be scrollable
-              SizedBox(height: 20),
-
-              Text(
-                "More profile content goes here...",
-                style: TextStyle(fontSize: 18),
-              ),
+              SizedBox(height: 10),
+              ProfileName(
+                  displayName:
+                      user.displayName), // Larger spacing for sectioning
             ],
           );
         }

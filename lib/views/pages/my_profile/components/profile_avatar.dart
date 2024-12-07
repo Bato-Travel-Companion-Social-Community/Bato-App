@@ -10,7 +10,7 @@ class ProfileAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 200, // Set the desired width
-      height: 300, // Set the desired height
+      height: 280, // Set the desired height
       decoration: BoxDecoration(
         color: Colors.grey[200], // Background color
         borderRadius: BorderRadius.circular(16), // Rounded corners
