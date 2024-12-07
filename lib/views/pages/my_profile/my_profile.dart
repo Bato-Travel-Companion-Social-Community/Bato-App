@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../../controllers/index.dart' show ProfileService; // Import services
 import '../../../models/index.dart' show UserModel; // Import user model
+import 'package:bato_app/views/index.dart'
+    show AppTextStyles, AppColors; // Import text styles
+import 'components/index.dart' show ProfileDetails; // Import profile details
 
 class MyProfilePage extends StatefulWidget {
   @override
@@ -14,42 +17,46 @@ class _MyProfilePageState extends State<MyProfilePage> {
   void initState() {
     super.initState();
     _profileFuture = ProfileService().getMyProfileDetails();
+    print('Profile future: $_profileFuture');
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Profile'),
-      ),
-      body: FutureBuilder<UserModel?>(
-        future: _profileFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error loading profile'));
-          } else if (!snapshot.hasData || snapshot.data == null) {
-            return Center(child: Text('No profile data found'));
-          } else {
-            final user = snapshot.data!;
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(user.avatar),
-                  radius: 50,
+    return FutureBuilder<UserModel?>(
+      future: _profileFuture,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          return Center(child: Text('Error loading profile'));
+        } else if (!snapshot.hasData || snapshot.data == null) {
+          return Center(child: Text('No profile data found'));
+        } else {
+          final user = snapshot.data!;
+          return ListView(
+            padding: const EdgeInsets.all(16.0),
+            children: [
+              ProfileDetails(profileAvatar: user.avatar),
+              SizedBox(height: 40), // Larger spacing for sectioning
+              Text(
+                "Welcome, ${user.displayName}!",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
-                SizedBox(height: 20),
-                Text(
-                  user.displayName,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ],
-            );
-          }
-        },
-      ),
+              ),
+              // Add more content below here, it will be scrollable
+              SizedBox(height: 20),
+
+              Text(
+                "More profile content goes here...",
+                style: TextStyle(fontSize: 18),
+              ),
+            ],
+          );
+        }
+      },
     );
   }
 }

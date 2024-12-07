@@ -4,19 +4,11 @@ import 'package:flutter/material.dart';
 List<Widget> getMyProfilePageAppBarActions(BuildContext context) {
   return [
     IconButton(
-      icon: const Icon(Icons.notifications_none_outlined),
+      icon: const Icon(Icons.menu),
       iconSize: 28,
       color: Theme.of(context).primaryColor,
       onPressed: () {
         print("Notifications tapped");
-      },
-    ),
-    IconButton(
-      icon: const Icon(Icons.message_outlined),
-      iconSize: 28,
-      color: Theme.of(context).primaryColor,
-      onPressed: () {
-        print("Messages tapped");
       },
     ),
   ];
