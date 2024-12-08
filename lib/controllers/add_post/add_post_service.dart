@@ -4,7 +4,7 @@ import 'services/index.dart' show AddImagePostService;
 import '../../models/index.dart' show MyCommunityPostModel;
 
 class AddPostService {
-  static const String baseUrl = 'http://192.168.1.212:5001/api/post';
+  static const String baseUrl = 'http://192.168.1.132:5001/api/post';
   final AddImagePostService _addImagePostService =
       AddImagePostService(baseUrl: baseUrl);
 
