@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bato_app/views/index.dart' show AppTextStyles;
 
 class ProfileName extends StatelessWidget {
-  String displayName;
+  final String displayName;
 
   ProfileName({required this.displayName});
 

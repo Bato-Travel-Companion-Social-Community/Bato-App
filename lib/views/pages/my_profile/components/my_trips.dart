@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bato_app/views/index.dart' show AppTextStyles, AppColors;
+import 'package:bato_app/views/index.dart' show AppTextStyles;
 import 'package:bato_app/models/index.dart' show MyCommunityPostModel;
 import 'package:bato_app/controllers/index.dart' show PostsService;
 import './index.dart' show PostPreview;

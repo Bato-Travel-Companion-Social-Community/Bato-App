@@ -3,8 +3,8 @@ import './index.dart'
     show ProfileAvatar, ProfileContentColumn, ProfileContentColumn2;
 
 class ProfileDetails extends StatelessWidget {
-  String profileAvatar;
-  String displayName;
+  final String profileAvatar;
+  final String displayName;
 
   ProfileDetails({required this.profileAvatar, required this.displayName});
 

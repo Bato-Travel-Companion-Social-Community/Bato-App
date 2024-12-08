@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../controllers/index.dart' show ProfileService; // Import services
 import '../../../models/index.dart' show UserModel; // Import user model
-import 'package:bato_app/views/index.dart'
-    show AppTextStyles, AppColors; // Import text styles
 import 'components/index.dart'
-    show ProfileDetails, ProfileName, MyTrips; // Import profile details
+    show ProfileDetails, MyTrips; // Import profile details
 
 class MyProfilePage extends StatefulWidget {
   @override

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:bato_app/views/index.dart' show AppTextStyles, AppColors;
 import './index.dart' show ProfileName;
 
 class ProfileAvatar extends StatelessWidget {
-  String profileAvatar;
-  String displayName;
+  final String profileAvatar;
+  final String displayName;
 
   ProfileAvatar({required this.profileAvatar, required this.displayName});
 
