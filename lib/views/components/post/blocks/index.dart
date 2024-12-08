@@ -7,3 +7,5 @@ export 'post_caption.dart';
 export 'post_bottom_bar.dart';
 export 'post_details.dart';
 export 'post_image_from_file.dart';
+export 'post_likes_modal.dart';
+export 'post_comments_modal.dart';

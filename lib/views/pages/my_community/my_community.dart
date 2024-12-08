@@ -24,11 +24,16 @@ class MyCommunityPage extends StatelessWidget {
             itemBuilder: (context, index) {
               final post = posts[index];
               return MyCommunityPost(
+                id: post.id,
                 postOwnerName: post.owner.displayName,
                 postLocation: post.location,
                 postProfileImageUrl: post.owner.avatar,
-                imageUrls: post.images, // Use the first image as an example
+                imageUrls: post.images,
                 postCaption: post.caption,
+                isLiked: post.isLiked,
+                likeCount: post.likeCount,
+                likes: post.likes,
+                commentCount: post.commentCount,
               );
             },
           );
