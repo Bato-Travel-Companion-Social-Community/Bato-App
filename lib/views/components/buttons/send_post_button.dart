@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:bato_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:bato_app/views/index.dart' show AppTextStyles;
 import 'package:bato_app/controllers/index.dart' show AddPostService;
