@@ -8,13 +8,16 @@ class ProfileName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      displayName,
-      style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.w900,
-          color: Theme.of(context).primaryColor,
-          fontFamily: AppTextStyles.fontFamilyPrimary),
+    return Transform.translate(
+      offset: Offset(0, -10), // Move the text 10 units upwards
+      child: Text(
+        displayName,
+        style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w900,
+            color: Theme.of(context).primaryColor,
+            fontFamily: AppTextStyles.fontFamilyPrimary),
+      ),
     );
   }
 }

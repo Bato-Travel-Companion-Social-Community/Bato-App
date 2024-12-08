@@ -18,7 +18,6 @@ class _MyProfilePageState extends State<MyProfilePage> {
   void initState() {
     super.initState();
     _profileFuture = ProfileService().getMyProfileDetails();
-    print('Profile future: $_profileFuture');
   }
 
   @override
@@ -39,7 +38,8 @@ class _MyProfilePageState extends State<MyProfilePage> {
             return Column(
               children: [
                 SizedBox(height: 10),
-                ProfileDetails(profileAvatar: user.avatar),
+                ProfileDetails(
+                    profileAvatar: user.avatar, displayName: user.displayName),
                 SizedBox(height: 10),
                 Expanded(
                   child: MyTrips(),

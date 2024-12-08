@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import './index.dart' show ProfileAvatar, ProfileContentColumn;
+import './index.dart'
+    show ProfileAvatar, ProfileContentColumn, ProfileContentColumn2;
 
 class ProfileDetails extends StatelessWidget {
   String profileAvatar;
+  String displayName;
 
-  ProfileDetails({required this.profileAvatar});
+  ProfileDetails({required this.profileAvatar, required this.displayName});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,9 @@ class ProfileDetails extends StatelessWidget {
       children: [
         ProfileContentColumn(),
         SizedBox(width: 20),
-        ProfileAvatar(profileAvatar: profileAvatar),
+        ProfileAvatar(profileAvatar: profileAvatar, displayName: displayName),
+        SizedBox(width: 20),
+        ProfileContentColumn2(),
       ],
     );
   }
