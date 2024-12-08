@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bato_app/views/index.dart'
-    show AppTextStyles, AppColors; // Import text styles
+import 'package:bato_app/views/index.dart' show AppColors; // Import text styles
 
 class ProfileContentColumn2 extends StatelessWidget {
   @override
