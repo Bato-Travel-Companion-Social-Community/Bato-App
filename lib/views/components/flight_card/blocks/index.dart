@@ -5,4 +5,4 @@ export 'flight_details_bottom_row.dart';
 export 'flight_price.dart';
 export 'airline_logo.dart';
 export 'flight_deal_row.dart';
-export 'flight_view_deal.dart ';
+export 'flight_view_deal.dart';

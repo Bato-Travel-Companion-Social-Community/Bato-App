@@ -3,7 +3,7 @@ import 'dart:io';
 import 'services/index.dart' show AddImagePostService;
 
 class AddPostService {
-  static const String baseUrl = 'http://192.168.1.132:5000/api/post';
+  static const String baseUrl = 'http://192.168.1.212:5001/api/post';
   final AddImagePostService _addImagePostService =
       AddImagePostService(baseUrl: baseUrl);
 
