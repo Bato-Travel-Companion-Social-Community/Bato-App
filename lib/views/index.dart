@@ -14,6 +14,7 @@ export 'components/app_bar/add_post_caption_app_bar.dart';
 export 'components/bottom_bar/custom_bottom_bar.dart';
 export 'components/post/my_community_post.dart';
 export 'components/post/add_post_preview.dart';
+export 'components/post/blocks/index.dart';
 
 export 'components/flight_card/one_way_flight_card.dart';
 export 'components/stay_card/stay_card.dart';
@@ -30,6 +31,7 @@ export 'pages/my_community/my_community.dart';
 export 'pages/messenger.dart';
 export 'pages/add_post/add_post.dart';
 export 'pages/add_post/screens/add_post_content.dart';
+export 'pages/my_profile/screens/index.dart';
 
 // router
 export 'router/main_go_router.dart';
