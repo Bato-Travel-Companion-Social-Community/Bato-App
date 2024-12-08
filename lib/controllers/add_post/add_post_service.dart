@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'services/index.dart' show AddImagePostService;
-import '../../models/index.dart' show MyCommunityPostModel;
 
 class AddPostService {
   static const String baseUrl = 'http://192.168.1.132:5000/api/post';

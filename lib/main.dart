@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:go_router/go_router.dart';
 import 'views/index.dart' show AppTheme, MainGoRouter;
 
 void main() {
