@@ -34,7 +34,6 @@ class MyTrips extends StatelessWidget {
               return Text('No posts found.');
             } else {
               final posts = snapshot.data!;
-              print(posts);
               return Expanded(
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
