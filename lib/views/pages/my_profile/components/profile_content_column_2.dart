@@ -1,34 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:bato_app/views/index.dart' show AppColors; // Import text styles
+import 'package:bato_app/views/index.dart'
+    show AppTextStyles, AppColors; // Import text styles
 
 class ProfileContentColumn2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 40),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          IconButton(
-              iconSize: 30,
-              onPressed: () {},
-              icon: Icon(
-                Icons.edit,
-              ),
-              color: AppColors.primary),
-          IconButton(
-              iconSize: 30,
-              onPressed: () {},
-              icon: Icon(Icons.share),
-              color: AppColors.primary),
-          IconButton(
-              iconSize: 30,
-              onPressed: () {},
-              icon: Icon(Icons.message),
-              color: AppColors.primary),
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Text(
+          '234',
+          style: TextStyle(
+            fontSize: 40,
+            color: AppColors.primary,
+            fontFamily: AppTextStyles.fontFamilyPrimary,
+          ),
+        ),
+        Transform.translate(
+          offset: Offset(0, -16), // Move the text 10 units upwards
+          child: Text(
+            'friends',
+            style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey[600],
+                fontFamily: AppTextStyles.fontFamilyPrimary),
+          ),
+        ),
+        Text(
+          '20',
+          style: TextStyle(
+            fontSize: 40,
+            color: AppColors.primary,
+            fontFamily: AppTextStyles.fontFamilyPrimary,
+          ),
+        ),
+        Transform.translate(
+          offset: Offset(0, -16), // Move the text 10 units upwards
+          child: Text(
+            'Bucket List',
+            style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey[600],
+                fontFamily: AppTextStyles.fontFamilyPrimary),
+          ),
+        ),
+      ],
     );
   }
 }

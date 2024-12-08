@@ -26,7 +26,7 @@ class ProfileAvatar extends StatelessWidget {
         ),
         SizedBox(height: 10),
         Padding(
-          padding: const EdgeInsets.only(bottom: 7),
+          padding: const EdgeInsets.only(bottom: 0),
           child: ProfileName(displayName: displayName),
         ),
       ],

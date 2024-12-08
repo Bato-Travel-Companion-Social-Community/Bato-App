@@ -12,7 +12,7 @@ class ProfileContentColumn extends StatelessWidget {
         Text(
           '50',
           style: TextStyle(
-            fontSize: 50,
+            fontSize: 40,
             color: AppColors.primary,
             fontFamily: AppTextStyles.fontFamilyPrimary,
           ),
@@ -22,7 +22,7 @@ class ProfileContentColumn extends StatelessWidget {
           child: Text(
             'trips',
             style: TextStyle(
-                fontSize: 16,
+                fontSize: 14,
                 fontWeight: FontWeight.bold,
                 color: Colors.grey[600],
                 fontFamily: AppTextStyles.fontFamilyPrimary),
@@ -31,7 +31,7 @@ class ProfileContentColumn extends StatelessWidget {
         Text(
           '6',
           style: TextStyle(
-            fontSize: 50,
+            fontSize: 40,
             color: AppColors.primary,
             fontFamily: AppTextStyles.fontFamilyPrimary,
           ),
@@ -41,7 +41,7 @@ class ProfileContentColumn extends StatelessWidget {
           child: Text(
             'Countries',
             style: TextStyle(
-                fontSize: 16,
+                fontSize: 14,
                 fontWeight: FontWeight.bold,
                 color: Colors.grey[600],
                 fontFamily: AppTextStyles.fontFamilyPrimary),

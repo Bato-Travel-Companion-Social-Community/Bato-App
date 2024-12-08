@@ -10,17 +10,20 @@ class ProfileDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment:
-          CrossAxisAlignment.end, // Vertically align text and image
-      children: [
-        ProfileContentColumn(),
-        SizedBox(width: 20),
-        ProfileAvatar(profileAvatar: profileAvatar, displayName: displayName),
-        SizedBox(width: 20),
-        ProfileContentColumn2(),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment:
+            CrossAxisAlignment.end, // Vertically align text and image
+        children: [
+          ProfileContentColumn2(),
+          SizedBox(width: 10),
+          ProfileContentColumn(),
+          SizedBox(width: 20),
+          ProfileAvatar(profileAvatar: profileAvatar, displayName: displayName),
+        ],
+      ),
     );
   }
 }
