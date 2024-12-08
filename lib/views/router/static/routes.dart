@@ -12,6 +12,7 @@ import '../../index.dart'
         SplashPage,
         LoginPage,
         AddPostContent,
+        MenuPage,
         SignupPage;
 import '../helpers/main.dart'
     show getPageIndexOfBottomBar, getAppBar, getBottomBar;
@@ -104,5 +105,9 @@ final List<RouteBase> routes = [
       final files = state.extra as List<File>; // Retrieve extra data
       return AddPostContent(files: files);
     },
+  ),
+  GoRoute(
+    path: '/menu', // Signup page for user registration
+    builder: (context, state) => MenuPage(),
   ),
 ];

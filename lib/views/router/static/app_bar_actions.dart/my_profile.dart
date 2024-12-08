@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 // Function to get the list of IconButtons
 List<Widget> getMyProfilePageAppBarActions(BuildContext context) {
@@ -10,7 +11,7 @@ List<Widget> getMyProfilePageAppBarActions(BuildContext context) {
         iconSize: 28,
         color: Theme.of(context).primaryColor,
         onPressed: () {
-          print("Notifications tapped");
+          context.push('/menu');
         },
       ),
     ),
