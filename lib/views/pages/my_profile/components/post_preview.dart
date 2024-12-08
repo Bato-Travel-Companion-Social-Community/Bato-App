@@ -19,15 +19,18 @@ class PostPreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      width: 200, // Set the desired width
-      height: 300, // Set the desired height
-      decoration: BoxDecoration(
-        color: Colors.grey[200], // Background color
-        borderRadius: BorderRadius.circular(16), // Rounded corners
-        image: DecorationImage(
-          image: NetworkImage(imageUrls[0]),
-          fit: BoxFit.cover, // Adjust the image to cover the box
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4.0),
+      child: Container(
+        width: 200, // Set the desired width
+        height: 300, // Set the desired height
+        decoration: BoxDecoration(
+          color: Colors.grey[200], // Background color
+          borderRadius: BorderRadius.circular(16), // Rounded corners
+          image: DecorationImage(
+            image: NetworkImage(imageUrls[0]),
+            fit: BoxFit.cover, // Adjust the image to cover the box
+          ),
         ),
       ),
     );

@@ -9,18 +9,22 @@ class MyTrips extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'My Trips',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.w900,
-            color: Theme.of(context).primaryColor,
-            fontFamily: AppTextStyles.fontFamilyPrimary,
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+          child: Text(
+            'My Trips',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w900,
+              color: Theme.of(context).primaryColor,
+              fontFamily: AppTextStyles.fontFamilyPrimary,
+            ),
           ),
         ),
         FutureBuilder<List<MyCommunityPostModel>?>(
-          future: PostsService().getImagePostsByUser(),
+          future: PostsService().getAllImagePosts(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return CircularProgressIndicator();
@@ -33,6 +37,7 @@ class MyTrips extends StatelessWidget {
               print(posts);
               return Expanded(
                 child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
                   itemCount: posts.length,
                   itemBuilder: (context, index) {
                     final post = posts[index];

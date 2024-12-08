@@ -4,7 +4,7 @@ import '../../../models/index.dart' show UserModel; // Import user model
 import 'package:bato_app/views/index.dart'
     show AppTextStyles, AppColors; // Import text styles
 import 'components/index.dart'
-    show ProfileDetails, ProfileName; // Import profile details
+    show ProfileDetails, ProfileName, MyTrips; // Import profile details
 
 class MyProfilePage extends StatefulWidget {
   @override
@@ -23,29 +23,32 @@ class _MyProfilePageState extends State<MyProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<UserModel?>(
-      future: _profileFuture,
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(child: CircularProgressIndicator());
-        } else if (snapshot.hasError) {
-          return Center(child: Text('Error loading profile'));
-        } else if (!snapshot.hasData || snapshot.data == null) {
-          return Center(child: Text('No profile data found'));
-        } else {
-          final user = snapshot.data!;
-          return Column(
-            children: [
-              SizedBox(height: 10),
-              ProfileDetails(profileAvatar: user.avatar),
-              SizedBox(height: 10),
-              ProfileName(
-                  displayName:
-                      user.displayName), // Larger spacing for sectioning
-            ],
-          );
-        }
-      },
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: FutureBuilder<UserModel?>(
+        future: _profileFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasError) {
+            return Center(child: Text('Error loading profile'));
+          } else if (!snapshot.hasData || snapshot.data == null) {
+            return Center(child: Text('No profile data found'));
+          } else {
+            final user = snapshot.data!;
+            return Column(
+              children: [
+                SizedBox(height: 10),
+                ProfileDetails(profileAvatar: user.avatar),
+                SizedBox(height: 10),
+                Expanded(
+                  child: MyTrips(),
+                ),
+              ],
+            );
+          }
+        },
+      ),
     );
   }
 }
