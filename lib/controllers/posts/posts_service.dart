@@ -9,4 +9,12 @@ class PostsService {
   Future<List<MyCommunityPostModel>?> getAllImagePosts() async {
     return await _getImagePostsService.getAllImagePosts();
   }
+
+  // Method to fetch posts specific to a user
+  // Method to fetch posts specific to a user or the authenticated user
+  Future<List<MyCommunityPostModel>?> getImagePostsByUser(
+      {String? userId}) async {
+    // Pass userId as optional
+    return await _getImagePostsService.getImagePostsByUser(userId: userId);
+  }
 }

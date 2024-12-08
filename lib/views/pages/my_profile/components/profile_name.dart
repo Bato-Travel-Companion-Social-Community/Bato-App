@@ -12,7 +12,7 @@ class ProfileName extends StatelessWidget {
       displayName,
       style: TextStyle(
           fontSize: 24,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w900,
           color: Theme.of(context).primaryColor,
           fontFamily: AppTextStyles.fontFamilyPrimary),
     );
