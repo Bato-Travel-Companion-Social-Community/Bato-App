@@ -41,11 +41,16 @@ class MyTrips extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final post = posts[index];
                     return PostPreview(
+                      id: post.id,
                       postOwnerName: post.owner.displayName,
                       postLocation: post.location,
                       postProfileImageUrl: post.owner.avatar,
                       imageUrls: post.images,
                       postCaption: post.caption,
+                      isLiked: post.isLiked,
+                      likeCount: post.likeCount,
+                      likes: post.likes,
+                      commentCount: post.commentCount,
                     );
                   },
                 ),
