@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './index.dart' show StayPrice, StayViewDeal;
+import 'index.dart' show StayPrice, StayViewDeal;
 
 class StayCardBottomRow extends StatelessWidget {
   final String pricePerNight;

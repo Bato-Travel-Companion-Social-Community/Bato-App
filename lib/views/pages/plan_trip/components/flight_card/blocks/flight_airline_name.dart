@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../index.dart' show AppTextStyles;
+import '../../../../../index.dart' show AppTextStyles;
 
 class FlightAirlineName extends StatelessWidget {
   final String airlineName;

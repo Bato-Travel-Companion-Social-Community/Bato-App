@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import './index.dart'
-    show StayRating, StayLocation, StayName, StayCardBottomRow;
+import 'index.dart' show StayRating, StayLocation, StayName, StayCardBottomRow;
 
 class StayDetails extends StatelessWidget {
   final String propertyLocation;

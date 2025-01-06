@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../views/index.dart' show AppTextStyles;
+import '../../../../../index.dart' show AppTextStyles;
 
 class StayPrice extends StatelessWidget {
   final String pricePerNight;

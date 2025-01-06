@@ -16,8 +16,8 @@ export 'components/post/my_community_post.dart';
 export 'components/post/add_post_preview.dart';
 export 'components/post/blocks/index.dart';
 
-export 'components/flight_card/one_way_flight_card.dart';
-export 'components/stay_card/stay_card.dart';
+export 'pages/plan_trip/components/flight_card/one_way_flight_card.dart';
+export 'pages/plan_trip/components/stay_card/stay_card.dart';
 
 // pages
 export 'pages/splash/splash.dart';

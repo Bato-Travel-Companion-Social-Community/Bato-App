@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './index.dart' show PostTopBar, PostCaption, PostBottomBar;
+import 'index.dart' show PostTopBar, PostCaption, PostBottomBar;
 import '../../../../models/index.dart' show LikeUser;
 
 class PostDetails extends StatelessWidget {

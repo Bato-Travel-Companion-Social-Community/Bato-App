@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './index.dart' show FlightPrice, FlightViewDeal;
+import 'index.dart' show FlightPrice, FlightViewDeal;
 
 class FLightDealRow extends StatelessWidget {
   final String price;
